@@ -1,0 +1,1414 @@
+body {
+	padding-top: 70px;
+}
+
+.scrolled {
+	background: $brand-primary;
+
+	& .navbar-brand {
+		background-position: 0 -16px;
+		height: 70px;
+	}
+
+	& .navbar-nav {
+		@include gradient-radial(#d42050, $brand-primary);
+	}	
+
+	& .navbar-nav > li > a {
+		background-image: url(../images/divider-scroll.png);
+	}
+
+	// &.navbar-default .navbar-nav > li:first-of-type a {
+	// 	background-image: url(../images/divider-scroll.png), url(../images/divider-scroll.png);
+	// 	background-repeat: no-repeat;
+	// 	background-position: right center, left center;
+	// }
+
+	& .navbar-nav > .active:not(.open) > a {
+		color: #ffffff;
+	  	background: $gray-darker url(../images/scroll-active-gradient.png) no-repeat 0 0;
+	}
+}
+
+.navbar-brand.active {
+	background-position: 0 -16px;
+	height: 70px;
+}
+
+.btn-larger {
+	padding: 10px;
+}
+
+.btn-largest {
+	padding: 20px 10px;
+	font-size: 20px;
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+	width: 100%;
+}
+
+.bootstrap-select .btn:focus {
+  outline: none;//thin dotted #333!important;
+  outline: none; //5px auto -webkit-focus-ring-color!important;
+  outline-offset: 0; //-2px;
+
+}
+
+.modal .bootstrap-select > .btn {
+	background: #666666;
+	padding: 10px;
+	border:1px solid #fff;
+	color: #fff;
+	text-shadow: 1px 1px 1px #333;
+	margin-bottom: 4px;
+	font-size: 18px;
+
+	.caret {
+		color: #fff;
+	}
+}
+
+.btn-group.open .dropdown-toggle {
+	text-shadow: none;
+}
+
+
+// .navbar-default .navbar-nav  > li:not(.active):before {
+// 	content: '';
+// 	display: block;
+// 	width: 5px;
+// 	height: 100%;
+// 	background: $gray-lighter;
+// 	position: absolute;
+// 	left: -5px;
+// 	width: 0;
+// 	transition: all .4s ease-in-out;
+// }
+
+// .navbar-default .navbar-nav  > li:hover:before {
+// 	left: 0;
+// 	width: 5px;
+// }
+
+
+//off canvas
+.navmenu {
+	width: 250px;
+}
+
+.navmenu-default {
+  	background-color: $gray-darker;
+  	border: none;
+  	box-shadow: inset 6px 0 15px 2px #3c3b3b;
+
+	ul {
+		list-style: none;
+		background: #ac1039;
+		padding: 0;
+		box-shadow: inset 8px 0 15px -2px #830325;
+  	}
+
+  	li {
+		padding-left: 40px;
+		background-image: url(../images/offcanvas-divider.png);
+		background-repeat: no-repeat;
+		background-position: right bottom;
+		transition: all .3s ease;
+ 
+  		&.active {			
+			background-color: $brand-primary;
+			box-shadow: inset 8px 0 15px -2px #830325;
+
+			a {
+				background: url(../images/mccarthy-logo-2.png) no-repeat left center;
+			}
+  		}
+
+  		&:hover {
+  			background-color: $brand-primary;
+
+  			& a {
+  				color: #ffffff;
+  				text-decoration: none;
+  			}
+  		}
+  	}
+
+  	a {
+  		font-variant: small-caps;
+  		color: #ececec;
+  		display: block;
+  		padding: 15px 0 15px 22px;
+  	}
+}
+
+//tabs
+.dropdown-menu .nav-tabs > li:not(.active),
+.page-tabs .nav-tabs > li:not(.active) {
+	background: #e8e7e7;
+	background-image: linear-gradient(#f6f5f5, #e1e0e0);
+	border-right: 1px #fff solid;
+}
+
+.dropdown-menu .tab-content .tab-pane,
+.page-tabs .tab-content .tab-pane {
+	background: #ffffff;
+	padding: 20px;
+	border-radius: 0 0 8px 8px;
+}
+
+.car-menu-item {
+
+	h5 {
+		font-variant: small-caps;
+		color: #252525;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	.price {
+		padding-bottom: 10px;
+		border-bottom: 1px solid #e9e9e9;
+		margin-bottom: 30px;
+	}
+
+	img {
+		margin-bottom: 20px;
+	}
+}
+
+
+
+.page-heading {
+	font-size: 50px;
+	font-family: $font-family-nissan;
+	font-variant: small-caps;
+}
+
+.bottom-menu {
+	background: $gray-darker;
+	color: #fff;
+	padding: 40px 0;
+
+	a {
+		color: $gray-light;
+		transition: all .3s;
+
+		&:hover {
+			color: #fff;
+			text-decoration: none;
+		}
+	}	
+
+	h5 {
+		font-variant: small-caps;
+		font-size: 17px;
+		font-weight: bold;
+	}
+
+	ul {
+		list-style: none;
+		padding-left:0;
+	}
+}
+
+.carousel {
+
+	.item {
+		position: relative;
+	}
+	
+	.carousel-caption {
+		font-family: $font-family-nissan;
+		font-size: 60px;
+		position: absolute;
+		width: 50%;
+		top: 50%;
+		right: 0;
+		color: #fff;
+		padding: 50px;
+		background: rgba(0, 0, 0, 0.3);
+		height: 150px;
+		font-variant: small-caps;
+	}
+
+}
+
+.footer {
+	text-align: center;
+	padding: 30px 0;
+
+	p {
+		color: #999999;
+		font-size: 12px;
+		margin-top: 23px;
+	}
+
+	> img {
+		margin-top: 15px;
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
+		transition: all .3s;
+
+		&:hover {
+			-webkit-filter: none;
+			filter: none;
+		}
+	}
+}
+
+.social-icons {
+
+	padding: 0;
+
+	li {
+		display: inline-block;
+	}
+
+	a {
+		display: block;
+		height: 52px;
+		width: 52px;
+		background-image: url(../images/facebook.png);
+		background-repeat: no-repeat;
+		text-indent: -9999em;
+		margin: 0 5px;
+		background-color: #ebebeb;
+		transition: all .4s;
+
+		&:hover {
+			background-color: #c71444;
+		}
+	}
+
+	.twitter {
+		background-image: url(../images/twitter.png);
+	}
+
+	.google {
+		background-image: url(../images/google.png);
+	}
+
+	.youtube {
+		background-image: url(../images/youtube.png);
+	}
+}
+
+.copy-container {
+	@include gradient-radial(#ffffff, $gray-lighter);
+	padding: 10px 0 25px 0;
+}
+
+.white-bg {
+	background: #ffffff;
+	padding: 30px 0 30px 0;
+}
+
+.calls-to-action {
+	padding: 30px 0;
+	@include gradient-radial($gray-lighter, $gray-light);
+}
+
+.cta-container {
+
+	.c2a-image {
+		display: none;
+	}
+
+	.c2a-icon {
+		display: none;
+	}
+
+	.ct2-title:hover div {
+		background: #333;
+	}
+
+	.c2a-name {
+		padding: 15px 10px;
+		margin-left: 1px;
+		font-variant: small-caps;
+		font-family: $font-family-nissan;
+		letter-spacing: 0.02em;
+		font-size: 22px;
+		display: table-cell;
+		width: 100%;
+		border-radius: 0;
+		text-align: center;
+		border: 1px solid #fff;
+		transition: all .6s;
+		
+
+		&:hover {
+			
+		}
+	}
+}
+
+
+
+.ct2-title {
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #222;
+	font-size: 18px;
+	display: table;
+	width: 100%;
+}
+
+
+
+.c2a-icon.why-mccarthy {
+	border-right: 0;
+}
+
+.mccarthy-title .c2a-icon {
+	border-radius: 10px 0 0 0;
+}
+
+.c2a-name {
+	padding: 15px 10px;
+	margin-left: 1px;
+	font-variant: small-caps;
+	display: table-cell;
+	width: 100%;
+	border-bottom-right-radius: 10px;
+}
+
+.mccarthy-title .c2a-name {
+	border-radius: 0 10px 0 0;
+}
+
+.test-drive,
+.test-drive + div {
+	background: $brand-primary;
+}
+
+.dealership,
+.dealership + div {
+	background: $gray-dark;
+}
+
+.enquiry,
+.enquiry + div {
+	background: $gray-darker;
+}
+
+.why-mccarthy {
+	background: #000000;
+}
+
+.why-mccarthy-links {
+	list-style: none;
+	padding: 0;
+
+	li {
+		background: url(../images/mccarthy-logo.png) no-repeat left center;
+		padding: 5px 0 5px 40px;
+		
+		&:not(:last-child) {
+			margin-bottom: 3px;
+		}		
+	}
+}
+
+
+.page-title {
+	text-align: center;
+	margin-top: 20px;
+	margin-left: 97px;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #333;
+}
+
+#more-links {
+	display: none;
+}
+
+.copy-accordion h4 {
+	
+	background: #000000;
+	color: #ffffff;
+	padding: 15px 10px 15px 35px;
+	background-position: right 10px center;
+	margin-bottom: 4px;
+	margin-top: 4px;
+	transition: all .6s;
+
+	&.active {
+		background-color: $brand-primary;
+		color: #ffffff;
+
+	// + div {
+	// 	display: block;
+	// }
+	}
+
+	&:hover:not(.active) {
+		cursor: pointer;
+		background-color: $gray-dark;
+	}
+
+	&:after {
+		content: '';
+		background: url(../images/mccarthy-logo-white.png) no-repeat;
+		height: 30px;
+		width: 30px;
+		float: right;
+		transition: all .5s ease;
+	}
+
+	&:hover:after,
+	&.active:after {
+		transform: rotate(-90deg);
+	}
+}
+
+.copy-accordion div {
+	display: none;
+	padding: 30px 20px;
+	background: #ffffff;
+
+	&:first-of-type {
+		display: block;
+	}
+}
+
+.copy-accordion div.default {
+ 	display: block
+}
+
+
+.accordion-cars {
+
+	h4 {
+		background: #757575;
+		font-family: $font-family-nissan;
+		font-size: 24px;
+		letter-spacing: 0.04em;
+		text-shadow: 1px 1px 1px #111;
+		font-variant: small-caps;
+
+		&.active {
+			background-color: #4a4a4a;
+		}
+	}
+
+	div:last-of-type {
+		border-radius: 0 0 10px 10px;
+	}
+
+}
+
+
+ .brand-colour {
+ 	color: $brand-primary;
+ }
+
+ .dealership-details {
+
+	text-align: right;
+
+ 	h6 {
+ 		color: $brand-primary;
+ 		font-size: $font-size-base + 2;
+ 		font-variant: small-caps;
+ 		margin-top: 12px;
+ 		margin-bottom: 3px;
+ 	}
+
+ }
+
+.dealership-image {
+	padding-top: 30px;
+}
+
+#map-canvas {
+	width: 100%;
+	height: 300px;
+}
+
+//buttons
+.btn {
+	font-variant: small-caps;
+}
+
+.btn-min {
+	min-width: 200px;
+}
+
+.normal-font .btn {
+	font-variant: normal;
+}
+
+.row-button {
+	margin-top: 20px;
+}
+
+
+.btn-red {
+	@include btn-red;
+	transition: all .5s;
+
+	// -webkit-animation: buttonChange 5s infinite;
+	// animation: buttonChange 5s infinite;
+
+	&:hover {
+		@include btn-black;
+	}
+
+ }
+
+
+
+ .btn-grey {
+	@include btn-grey;
+	transition: all .4s;
+
+	&:hover {
+		@include btn-red;
+	}
+ }
+
+  .btn-grey-upside {
+	@include btn-grey-upside;
+
+	&:hover {
+		@include btn-red;
+	}
+
+ }
+
+ .btn-black {
+	@include btn-black;
+	transition: all .5s;
+
+	&:hover {
+		@include btn-red;
+	}
+ }
+
+ .btn-grey-modal {
+ 	@include btn-grey-modal;
+
+ 	&:hover {
+ 		@include btn-black;
+
+ 		.caret {
+			color: #fff;
+			height: 15px;
+ 		}
+ 	}
+ }
+
+.modal .caret {
+  border-top: 8px solid;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+
+.modal button.selected {
+	@include btn-red;
+}
+
+.small-button-left{
+	
+	padding: 5px 25px;
+	//text-shadow: none;	
+
+	// &:hover {
+	// 	@include btn-grey;
+	// }
+
+
+}
+
+.small-button-right{
+	//@include btn-curved-reverse;
+	padding: 5px 25px;
+	//text-shadow: none;
+
+	// &:hover {
+	// 	@include btn-grey;
+	// }	
+}
+
+ .btn-curved {
+ 	@include btn-curved;
+ }
+
+  .btn-curved-reverse {
+ 	@include btn-curved-reverse;
+ }
+
+.mm-outer {
+	background: rgba(235,235,235,0.8);
+	border-top-color: #ebebeb;
+	padding: 20px;
+}
+
+.mm-outer.dealerships {
+	margin-left: -100px;
+}
+
+ .mm-inner-dealerships {
+ 	list-style: none;
+	padding: 0;
+
+	li {
+		background: #f6f5f5;
+		display: table-row;
+
+		&:first-of-type {
+			span {border-radius: 10px 0 0 0}
+			a {border-radius: 0 10px 0 0}
+		}
+
+		&:last-of-type {
+			span {border-radius: 0 0 0 10px}
+			a {border-radius: 0 0 10px 0}
+		}
+
+		&:hover span,
+		&.active span {
+			background: #fcfbfb;
+		}
+
+		&:hover span:before,
+		&.active span:before {
+			background-image: url(../images/mccarthy-logo-red.png);
+			transform: rotate(90deg);			
+		}
+
+		&:hover a,
+		&.active a {
+			color: $brand-primary;
+			text-decoration: none;
+			background: #fcfbfb;
+		}
+
+		span {
+			width: 15%;
+			height: 50px;
+			display: table-cell;
+			border-right: 1px solid #dcdcdc;
+			border-bottom: 1px solid #dcdcdc;
+			position: relative;			
+			transition: all .5s;
+
+			&:before {
+				content: '';
+				width: 50px;
+				height: 50px;
+				background: url(../images/mccarthy-logo.png) no-repeat center center;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: transform .4s;
+			}
+		}
+
+		a {
+			color: #000000;
+			display: table-cell;
+			width: 85%;
+			height: 50px;
+			vertical-align: middle;
+			padding-right: 10px;
+			padding-left: 10px;
+			border-bottom: 1px solid #dcdcdc;
+			transition: all .5s;
+		}
+	}
+ }
+
+
+ .search-button {
+ 	background-color: rgba(0, 0, 0, 0.8);
+ 	background-image: url(../images/search-gradient-black.png);
+ 	background-repeat: no-repeat;
+ 	background-position: left top;
+	height: 100px; 
+	width: 80px; 
+	position: fixed; 
+	
+	z-index: 99999;
+	border: 2px solid #ffffff;
+	border-left: none;
+	border-radius: 0 10px 10px 0;
+	outline: 0;
+
+	bottom: -10px;
+	left: 50%;
+	transform: rotate(-90deg);
+
+	transition: all .7s;
+	// top: 20%; 
+	// left: 0;
+
+	&:before {
+		content: '';
+		height: 100px; 
+		width: 80px;
+		background-image: url(../images/search-icon.png);
+	 	background-repeat: no-repeat;
+	 	background-position: center center;
+	 	position: absolute;
+	 	left: 0;
+	 	top: 0;
+	 	transition: opacity .2s;
+	 	opacity: 0.7;
+	 	transform: rotate(90deg);
+	}
+
+	&:hover {
+		//@include btn-grey-upside;
+		// background-image: ();
+		// border-left: none;
+		cursor: pointer;
+		background-color: rgba(0, 0, 0, 0.6);
+
+		&:before {
+			//transform: rotate(-360deg);
+			opacity: 1;
+		}
+	}
+}
+
+.no-padding-right {
+	padding-right: 1px;
+}
+
+.no-padding-left {
+	padding-left: 1px;
+}
+
+.btn-modal {
+	border:2px solid white;
+	padding: 10px;
+  	font-size: 18px;
+
+  	&:focus {
+  		@include btn-red;
+  		outline: none;
+  	}
+}
+
+.row-modal {
+	margin-bottom: 2px;
+}
+
+.price-range-container {
+	padding: 15px;
+	background: #ebebeb;
+	margin-top: 4px;
+	margin-left:  15px;
+	margin-right: 15px;
+
+	input {
+		color: $brand-primary;
+		font-weight: bold;
+		background: none;
+		border: none;
+		//font-size: 18px;
+	}
+
+	&:after {
+		content: '';
+		clear: both;
+	}
+}
+
+.change-range {
+	background: #7e7e7e;
+	border: 1px #ffffff solid;
+	padding: 10px;
+	color: #ffffff;
+
+	&:hover {
+		background: #8c8b8b;
+	}
+}
+
+//jQuery ui
+.ui-slider-horizontal {
+	height: 25px;
+	margin-top: 20px;
+	width: 75%;
+  	margin-right: auto;
+  	margin-bottom: 15px;
+  	margin-left: 20px;
+  	background: #ccc;
+ 	border-color: white;
+}
+
+.ui-slider-horizontal .ui-slider-range {
+	background-color: $brand-primary;
+	height: 30px;
+	top: -.25em;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+	background: $gray-darker !important;
+	width: 45px;
+	height: 45px;
+	outline: none;
+	top: -.6em;
+
+	&:hover {
+		border-color: #fff;
+	}
+
+	&:focus {
+		border-color: #fff;
+	}
+}
+
+.modal-search .modal-footer {
+	text-align: center;
+}
+
+.modal-search.fade:not(.in).left .modal-dialog {
+	-webkit-transform: translate3d(-25%, 0, 0);
+	transform: translate3d(-25%, 0, 0);
+}
+
+.form-container {
+	padding: 30px;
+	background: rgba(180, 180, 180, 0.2);
+	border-radius: 0 50px 0 50px;
+	border: 1px solid #fff;
+}
+
+textarea {
+	height: 200px;
+}
+
+legend {
+	color: $brand-primary;
+	font-family: $font-family-nissan;
+  	margin-bottom: 13px;
+  	border-bottom: 1px solid #c71444;
+  	font-weight: normal;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .btn-default.dropdown-toggle {
+	color: #fff;
+	background-color: #333; 
+	border-color: #fff;
+}
+
+.test-drive-container {
+
+	.vehicle-description {
+		margin-top: 20px;
+	}
+}
+
+.left-top-radius {
+	border-radius: 10px 0 0 0;
+}
+
+.right-bottom-radius {
+	border-radius: 0 0 10px 0;
+}
+
+.specials {
+
+	h2 {
+		color: #fff;
+		background: $brand-primary;
+		font-family: $font-family-nissan;
+		margin-top: 0;
+		padding: 10px;
+		letter-spacing: 0.03em;
+		margin-bottom: 6px;
+		//border-radius: 0 10px 0 0;
+	}
+}
+
+.special-item {
+
+	transition: all .3s;
+
+	> img {
+		display: block;
+		border-radius: 10px 0 0 0;
+		transition: all .3s;
+		border: 10px solid $gray-darker;
+	}
+
+	&:hover {
+		> img {
+			filter: sepia(20%);;
+			-webkit-filter: sepia(20%);
+		}
+	}
+
+	.description {
+		padding: 10px 20px;
+		background: $gray-darker;
+		//border: 1px solid #fff;
+		//border-top: none;
+		border-radius: 0 0 10px 0;
+		color: #ffffff;
+		text-shadow: 1px 1px 1px #111;
+		//@include gradient-radial(#525252, $gray-darker);
+		transition: all .3s;
+
+		// &:hover {
+		// 	//@include gradient-radial(#ebebeb, #999);
+		// 	border-color: #393939;
+		// }
+	}
+
+	margin-bottom: 20px;
+}
+
+.specials-container {
+	
+	.nav-tabs {
+		border-top: none;
+		border-right: none;
+		border-bottom: 1px solid #ddd;
+
+		> li {
+
+			 border-color: #ddd;
+			 border: none;
+
+			&.active a {
+				color: #000;
+			}
+
+			> a {
+				color: #fff;
+				padding: 10px 50px;
+				font-size: 22px;
+				border: none;
+
+				&.active,
+				&:hover {
+					color: #000;
+				}
+			}
+		}
+
+	}
+
+	.nav-tabs > li:first-of-type,
+	.nav-tabs > li:first-of-type a {
+	  border-radius: 0;
+	}
+
+	li {
+		background: $brand-primary;
+	}
+
+	& .tab-content {
+		padding: 30px 20px;
+		background: #fff;
+	}
+
+	& .cms-specials {
+		img {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.car-row {
+	
+	overflow: hidden;
+	margin-bottom: 30px;
+
+	h3 {
+		font-weight: bold;
+	}
+
+	.description {
+		// background: #fff;
+		// height: 100%;
+		background: #fefefe;
+		//margin-left: -15px;
+		border-top: 2px solid white;
+		border-bottom: 2px solid white;
+		margin-left: -30px;
+		padding-left: 30px;
+	}	
+
+	.price {
+		font-size: 22px;
+	}
+}
+
+.car-detail-top {
+	@include gradient-radial(#ffffff, #dfdbdb);
+	padding: 20px 0;
+
+	& .btn:first-of-type {
+		margin-bottom: 10px;
+	}
+
+	& .colour-picker {
+
+		padding: 0;
+		margin-top: 30px;
+		margin-bottom: 30px;
+
+		li {
+			list-style: none;
+			display: inline-block;
+			margin-right: -4px;
+		}
+
+		a {
+			display: block;
+			width: 48px;
+			height: 48px;
+			border-radius: 100%;
+			border: 2px solid transparent;
+			padding: 3px;
+			
+			&:after {
+				content: '';
+				width: 40px;
+				height: 40px;
+				display: block;
+				border-radius: 100%;
+				margin-top: -1px;
+				margin-left: -1px;
+				box-shadow: inset 0 10px 9px -7px rgba(0,0,0,0.6);
+				transition: all .3s;
+			}
+
+			&.active,
+			&:hover {
+				border-color: #afaaaa;
+				box-shadow: none;
+			}
+		}
+	}
+}
+
+.colour-2e303b:after {
+	background: #2e303b;
+}
+
+.colour-8f0d03:after {
+	background: #8f0d03;
+}
+
+.colour-5c5554:after {
+	background: #5c5554;
+}
+
+.colour-bb3025:after {
+	background: #bb3025;
+}
+
+.car-name {
+	color: #d0d0d0;
+	font-family: $font-family-nissan;
+	font-size: 24px;
+	padding-top: 19px;
+	padding-right: 21px;
+	display: none;
+	font-variant: small-caps;
+}
+
+h2.car-name {
+	margin: 0;
+	padding: 0;
+}
+
+.new-car-nav {
+	background: #000;
+
+	.nav {
+		float: none;
+		padding-left: 0;
+		background: #000;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		list-style: none;
+		display: inline-block;
+		margin-right: -5px;
+
+
+		&.active a {
+			//background: $brand-primary;
+			@include gradient-radial(#e13865, $brand-primary);
+		}
+	}
+
+	a {
+		color: #fff;
+		display: block;
+		padding: 25px 30px;
+		font-variant: small-caps;
+		text-shadow: 1px 1px 1px #333;
+
+		&:hover {
+			text-decoration: none;
+			background: #424242;
+			@include gradient-radial(#908f8f, #424242);
+		}
+	}
+
+}
+
+.fixed {
+	position: fixed;
+	left: 0;
+	top: 70px;
+	width: 100%;
+	z-index: 1000;
+}
+
+.car-links {
+
+	text-align: right;
+
+	li {
+		list-style: none;
+		display: inline-block;
+
+		&:not(:last-of-type) {
+			//border-right: 1px #000 solid;
+			padding-right: 5px;
+		}
+	}
+
+	a {
+		color: #000;
+		
+		&:not(:last-of-type) {
+			padding-right: 10px;
+		}
+
+	}
+}
+
+
+.fullscreen-container {
+	width:100%;
+	position:relative;
+	padding:0;
+}
+
+.banner-heading {
+	font-size: 100px;
+	font-family: $font-family-nissan;
+	color: #fff;
+	text-shadow: 2px 2px 2px #000;
+	font-variant: small-caps;
+}
+
+.show {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+
+// .btn-cta {
+// 	min-height:200px;
+// 	background:#000;
+// 	color:#fff;
+// 	border-radius:10px;
+// 	font-family: $font-family-nissan;
+// 	font-size: 24px;
+// 	display: table-cell;
+// 	vertical-align: middle;
+// 	width: 100%;
+// 	text-align: left;
+// }
+
+.copy-container-dark {
+	@include gradient-radial(#636262, #272727);
+	padding: 50px 0 60px;
+	color: #fff;
+
+	h2 {
+		color: $brand-primary;
+		//text-shadow: 0 1px 1px #999;
+	}
+}
+
+.btn-outline {
+	@include btn-outline(1px, #000, $brand-primary);
+	color: #000;
+	border-radius: 0;
+
+	&:hover {
+		color: $brand-primary;
+		text-decoration: none;
+		background: rgba(255, 255, 255, 0.5);
+	}
+
+	// &:first-of-type {
+	// 	border-radius: 10px 0 0 0;
+	// }
+}
+
+ .new-car-container {	
+	
+	padding-top: 40px;
+
+ 	 h3 {
+ 	 	margin-top: 0;
+ 	 	padding-top: 0;
+ 	 	font-family: $font-family-nissan;
+ 	 	font-variant: small-caps;
+ 	 	color: #4c4c4c;
+ 	 	font-size: 40px;
+ 	 	letter-spacing: 0.02em;
+ 	 }
+
+	&.extra-padding {
+		padding-top: 90px;
+	}
+
+	// & .car-section-heading:not(:first-child) {
+	// 	margin-top: 80px;
+	// }
+ }
+
+.car-section-heading {
+	overflow: hidden;
+	border-bottom: 1px solid #cecece;
+	margin-bottom: 20px;
+	//margin-top: 50px;
+}
+
+
+.version-container {
+	@include gradient-radial(#fcfcfc, #ebebeb);
+	border-radius: 15px;
+	border: 1px solid #fff;
+	padding: 20px;
+
+	h4 {
+		font-family: $font-family-nissan;
+		letter-spacing: 0.02em;
+		font-variant: small-caps;
+		font-size: 38px;
+	}
+	
+	& .price {
+		font-family: $font-family-nissan;
+		letter-spacing: 0.02em;
+		font-variant: small-caps;
+		font-size: 28px;
+		color: $brand-primary;
+	}
+
+	& .highlights {
+		margin-bottom: 15px;
+	}
+
+}
+
+.car-details-menu {	
+	li {
+		background: url(../images/car-divider.png) no-repeat right top;
+	}
+}
+
+.slick-dots {
+
+	bottom: auto;	
+	width: auto;
+	text-align: none;
+	top: 23px;
+	right: 20px;
+
+	li {
+		display: block;
+		margin-bottom: 8px;
+
+		button:before {
+			font-size: 20px;
+		}
+
+		&.slick-active button:before,
+		&:hover button:before {
+			color: #333;
+			opacity: 0.85;
+		}
+	}
+	
+}
+
+.slick-prev:before,
+.slick-next:before {
+	font-size: 40px;
+	color: #333;
+}
+
+.slick-prev {
+	left: 20px;
+	width: auto;
+	height: auto;
+}
+
+.slick-next {
+	right: 20px;
+	width: auto;
+	height: auto;
+}
+
+.car-features-container {
+	background: #ededed;
+	border-radius: 10px;
+	padding: 20px;
+	margin-top: 30px;
+}
+
+
+.special-details-container {
+
+	h2 {
+		margin-top: 0;
+	}
+
+	.specials-details {
+		@include gradient-radial(#444444, #333333);
+		padding: 20px;
+		margin-bottom:0;
+		background: #333;
+		color: #fff;
+		border: 1px solid #fff;
+	}
+
+	.price {
+		font-family: $font-family-nissan;
+		font-size: 28px;
+		color: #fff;
+		margin-left: 10px;
+		margin-bottom: 15px;
+		left: 50%;
+	}
+
+	.price-container {
+		@include gradient-radial(#666666, #4c4c4c);
+		border: 1px solid #fff;
+		padding: 20px;
+	}
+}
+
+.no-border {
+	border: none;
+}

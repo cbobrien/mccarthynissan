@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.scss"],"names":[],"mappings":"AACA;EACQ,cAAA;EACP,oBAAY,EAAA","file":"app.css","sourcesContent":["\r\nbody {\r\n\tcolor: green;\r\n\ttransition: all 1s;\r\n}"],"sourceRoot":"/source/"}

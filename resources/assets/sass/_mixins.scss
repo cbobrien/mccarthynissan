@@ -1,0 +1,90 @@
+@mixin btn-red {
+	background-color: $brand-primary;
+	background-image: url(../images/button-red-gradient.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #333;
+	border: 2px solid #ffffff;
+
+	&:focus {
+		color: #ffffff;
+	}
+}
+
+@mixin btn-red-brighter {
+	background-color: #e33967;
+	background-image: url(../images/button-red-gradient.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #333;
+	border: 2px solid #ffffff;
+
+	&:focus {
+		color: #ffffff;
+	}
+}
+
+@mixin btn-grey {
+	background-color: $gray-dark;
+	background-image: url(../images/button-grey-gradient.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #333;
+	border: 2px solid #ffffff;
+
+	&:focus {
+		color: #ffffff;
+	}
+}
+
+@mixin btn-grey-upside {
+	@include btn-grey;
+	background-image: url(../images/button-grey-gradient-upside.png);
+	background-position: center top;
+}
+
+@mixin btn-black {
+	background-color: #000000;
+	background-image: url(../images/button-grey-gradient.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #333;
+	border: 2px solid #ffffff;
+
+	&:focus {
+		color: #ffffff;
+	}
+}
+
+@mixin btn-grey-modal {
+	//@include gradient-radial(#8d8d8d, $gray-dark);
+	background: $gray-dark;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #333;
+	border: 2px solid #ffffff;
+
+	&:focus {
+		color: #ffffff;
+	}
+}
+
+@mixin btn-curved {
+	border-radius: 8px 10px 8px 28px;
+}
+
+@mixin btn-curved-reverse {
+	border-radius: 8px 28px 8px 10px;
+}
+
+@mixin btn-outline($width, $colour, $hover-colour) {
+	border: $width solid $colour;
+	padding: 5px;
+
+	&:hover {
+		border-color: $hover-colour;
+	}
+}

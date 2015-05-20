@@ -1,0 +1,122 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+
+	.navbar {	
+  		background-color: $gray-darker;
+  		background-image: none;
+
+  		&.scrolled {
+  			background-color: $brand-primary;
+  		}
+	}
+
+	.navbar-brand {
+		height: 120px;
+		background-position: 0 0;
+	}
+
+	.page-title {
+		display: none;
+	}
+
+	.page-heading {
+		font-size: 50px;
+		//text-align: right;
+	}
+}
+
+@media (min-width: $screen-xs-min) and (max-width: $screen-md-min) {
+		 
+	.cta-container .c2a-name {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		min-height: 100px;
+	}	
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+	.page-heading {
+		font-size: 70px;
+		line-height: 65px;
+	}
+
+	.price-range-container {
+		margin-left: 15px;
+	}
+
+	.ui-slider-horizontal {
+		width: 89%;
+	}
+
+	.cta-container {
+	
+		.c2a-image {
+			display: block;
+			@include gradient-radial(#ffffff, $gray-lighter);
+			padding: 15px 10px;
+			border-radius: 10px 10px 0 0;
+			overflow: hidden;		
+	
+			&.mccarthy-block {
+				border-radius: 0 0 10px 10px;
+			}
+
+			img {
+				transition: all .4s;
+			}
+
+			&:hover {
+
+				img {
+				    transform: rotate(-15deg) scale(1.5,1.5);
+
+				}
+			}
+		}
+
+		.c2a-icon {
+			padding: 15px;
+			border-right: 1px #ffffff solid;
+			display: table-cell;
+			border-bottom-left-radius: 10px;
+		}
+
+		.c2a-name {
+			border-radius: 0 0 10px 0;
+			border: none;
+		}
+
+		.why-mccarthy {
+			border-radius: 10px 10px 0 0;
+		}
+	}
+
+	.search-button {
+		top: 20%; 
+		left: 0;
+		bottom: auto;
+		transform: none;
+
+	}
+	
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
+	.small-button-left {
+		@include btn-curved;
+	}
+
+	.small-button-right{
+		@include btn-curved-reverse;
+	}
+
+}

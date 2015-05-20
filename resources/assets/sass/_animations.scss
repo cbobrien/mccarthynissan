@@ -1,0 +1,27 @@
+@-webkit-keyframes backgroundColour {
+    0%   {background-color:#ffffff;}
+    50%  {background-color:#eeeeee;}
+    100% {background-color:#ffffff;}
+}
+
+
+@keyframes backgroundColour {
+    0%   {background-color:#ffffff;}
+    50%  {background-color:#eeeeee;}
+    100% {background-color:#ffffff;}
+}
+
+
+
+@-webkit-keyframes buttonChange {
+    0%   {@include btn-red}
+    50%  {@include btn-red-brighter}
+    100% {@include btn-red}
+}
+
+
+@keyframes buttonChange {
+    0%   {@include btn-red}
+    50%  {@include btn-red-brighter}
+    100% {@include btn-red}
+}

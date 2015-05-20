@@ -1,0 +1,280 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+
+	// .navbar-nav .dropdown-menu {
+	// 	margin-left: -87px;
+
+	// 	&.dealerships {
+	// 		// display: block;
+	// 		position: relative;
+	// 		width: 200px;
+	// 		left: 90px;
+	// 		background: none;
+	// 		border: none;
+	// 		box-shadow: none;
+	// 		// border-radius: 0;
+	// 		// margin-left: 100px;
+
+	// 		.mm-inner-dealerships {
+	// 			// width: 200px;
+	// 			background: none;
+	// 			width: 180px;
+
+	// 			li:first-of-type a,
+	// 			li:last-of-type a {
+	// 				border-radius: 0;
+	// 			}
+				
+				
+	// 		}
+
+	// 		span {
+	// 			display: block;
+	// 		}
+	// 	}
+	// }
+
+	.search-page,
+	.used-page {
+
+		.description {
+			margin-left: -35px;
+		}
+
+	}
+
+	.more-links-dropdown {
+		left:-150px;
+	}
+
+	#more-links {
+		position: relative;
+	}
+
+	.navbar {	
+  		background-color: $gray-darker;
+  		background-image: none;
+
+  		&.scrolled {
+  			background-color: $brand-primary;
+  		}
+	}
+
+	.navbar-brand {
+		height: 120px;
+		background-position: 0 0;
+	}
+
+	.page-title {
+		display: none;
+	}
+
+	.page-heading {
+		font-size: 50px;
+
+		&.used-cars {
+			font-size: 30px;
+		}
+		//text-align: right;
+	}
+
+	.pagination li {
+
+		a {
+			padding: 15px 18px;
+			transition: all .3s;
+		}
+
+		&.break {
+			padding: 15px 20px;
+		}
+
+		&.next a,
+		&.previous a {
+			text-indent: 0;
+
+			&:after {
+				content: '';
+			}
+		}
+	}
+
+	.version-container {
+		// margin-bottom: 0;
+	}
+
+	.search-page,
+	.used-page {
+
+		& .pagination {
+
+			span {
+				padding: 15px 18px;
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-xs-min) and (max-width: $screen-md-min) {
+		 
+	.cta-container .c2a-name {
+		padding-top: 30px;
+		padding-bottom: 30px;
+		min-height: 100px;
+	}	
+
+	.copy-accordion .nav-tabs li a {
+		padding: 10px 5px;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+	// .banner-heading {
+	// 	font-size: 100px;
+	// 	padding: 40px 0;
+	// }
+
+	.page-heading {
+		font-size: 70px;
+		line-height: 65px;
+
+		&.used-cars {
+			font-size: 50px;
+			line-height: 50px;
+		}
+	}
+
+	.price-range-container {
+		margin-left: 15px;
+	}
+
+	.ui-slider-horizontal {
+		width: 89%;
+	}
+
+	.cta-container {
+	
+		.c2a-image {
+			display: block;
+			@include gradient-radial(#ffffff, $gray-lighter);
+			padding: 15px 10px;
+			border-radius: 10px 10px 0 0;
+			overflow: hidden;		
+	
+			&.mccarthy-block {
+				border-radius: 0 0 10px 10px;
+				min-height: 168px;
+			}
+
+			img {
+				transition: all .4s;
+			}
+
+			&:hover {
+
+				img {
+				    transform: rotate(-15deg) scale(1.5,1.5);
+
+				}
+			}
+		}
+
+		.c2a-icon {
+			padding: 15px;
+			border-right: 1px #ffffff solid;
+			display: table-cell;
+			border-bottom-left-radius: 10px;
+		}
+
+		.c2a-name {
+			border-radius: 0 0 10px 0;
+			border: none;
+		}
+
+		.why-mccarthy {
+			border-radius: 10px 10px 0 0;
+		}
+	}
+
+	.search-button {
+		top: 20%; 
+		left: 0;
+		width: 80px; 
+		bottom: auto;
+		transform: none;
+		
+		&:before {
+		 	top: -10px;
+		 	left: 0;
+		}
+
+		&:after {
+			top: 32px;
+			left: 10px;
+			transform: none;
+		}
+	}
+
+	.car-links {
+		text-align: right;
+	}
+
+	.exterior-download-links {
+		text-align: right;
+		margin-bottom: 0;
+	}
+
+	.interior-download-links {
+		text-align: right;
+		margin-bottom: 0;
+	}
+
+	.car-details-menu {	
+		li {			
+			a {
+				padding: 20px 30px;
+			}
+		}
+	}
+
+	.search-page,
+	.used-page {
+
+		& .pagination {
+
+			span {
+				padding: 15px 18px;
+			}
+		}
+	}
+
+	.car-row {
+		&.stock {
+			img {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
+	.small-button-left {
+		@include btn-curved;
+	}
+
+	.small-button-right{
+		@include btn-curved-reverse;
+	}
+
+}
