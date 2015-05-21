@@ -5793,6 +5793,12 @@ body {
 .btn-group.open .dropdown-toggle {
   text-shadow: none; }
 
+.yamm .dropdown.yamm-fw .dropdown-menu.new-car-menu-container {
+  height: 385px;
+  overflow-y: scroll;
+  width: 780px;
+  left: auto; }
+
 .navmenu {
   width: 250px; }
 
@@ -5852,17 +5858,23 @@ body {
   padding: 20px;
   border-radius: 0 0 8px 8px; }
 
-.car-menu-item h5 {
-  font-variant: small-caps;
-  color: #252525;
-  font-size: 18px;
-  font-weight: bold; }
-.car-menu-item .price {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #e9e9e9;
-  margin-bottom: 30px; }
-.car-menu-item img {
-  margin-bottom: 20px; }
+.car-menu-item {
+  padding: 10px;
+  background: #F8F8F8;
+  border-radius: 10px 10px 10px 30px;
+  text-align: center;
+  margin-bottom: 15px; }
+  .car-menu-item h5 {
+    font-variant: small-caps;
+    color: #252525;
+    font-size: 18px;
+    font-weight: bold; }
+  .car-menu-item .price {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e9e9e9;
+    margin-bottom: 30px; }
+  .car-menu-item img {
+    margin-bottom: 20px; }
 
 .page-heading {
   font-size: 60px;
@@ -7121,6 +7133,16 @@ h2.car-name {
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .car-menu-item h5, .car-menu-item .price {
+    text-align: left;
+    padding-left: 10px; }
+  .yamm .dropdown.yamm-fw .dropdown-menu.new-car-menu-container {
+    height: auto;
+    overflow-y: none;
+    overflow: hidden;
+    width: 900px;
+    left: 0;
+    margin: 0 auto; }
   .page-heading {
     font-size: 70px;
     line-height: 65px; }
@@ -7187,6 +7209,9 @@ h2.car-name {
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .yamm .dropdown.yamm-fw .dropdown-menu.new-car-menu-container {
+    width: auto;
+    margin: inherit; }
   .small-button-left {
     border-radius: 8px 10px 8px 28px; }
   .small-button-right {

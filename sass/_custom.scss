@@ -78,6 +78,12 @@ body {
 	text-shadow: none;
 }
 
+.yamm .dropdown.yamm-fw .dropdown-menu.new-car-menu-container {
+	height: 385px;
+	overflow-y: scroll;	
+	width: 780px;
+	left: auto;
+}
 
 // .navbar-default .navbar-nav  > li:not(.active):before {
 // 	content: '';
@@ -195,6 +201,12 @@ body {
 }
 
 .car-menu-item {
+
+	padding:  10px;
+	background: #F8F8F8;
+	border-radius: 10px 10px 10px 30px;
+	text-align: center;
+	margin-bottom: 15px;
 
 	h5 {
 		font-variant: small-caps;

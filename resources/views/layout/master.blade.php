@@ -52,7 +52,7 @@
 					<li class="{{ ($path == '') ? 'active' : '' }}"><a href="/">Home</a></li>					
 					<li class="dropdown yamm-fw <?php if((stristr($path, 'new-cars') !== false) || (stristr($path, 'new-car'))) echo 'active'; ?>">
 						<a href="#" class="dropdown-toggle new-car-link" data-toggle="dropdown" role="button" aria-expanded="false">New Cars</a>            			
-            			<ul class="dropdown-menu mm-outer" role="menu">
+            			<ul class="dropdown-menu mm-outer new-car-menu-container" role="menu">
             				<li>															
 								{!!html_entity_decode($menu)!!}																
             				</li>																												
