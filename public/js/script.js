@@ -21,14 +21,12 @@ $(function() {
 		$('.navbar-brand').addClass('active');	
 	});
 
-
 	$(document).on('click', '.yamm .dropdown-menu', function(e) {		
 	   	e.stopPropagation()
 	})
 
 	//stop rev slider when mega menu visible
 	$('.yamm-fw > a').on('click', null, function(e) {		
-
 	   	if(!$('.mm-outer').is(':visible'))
     		$('.banner').revpause();
     	else
@@ -187,15 +185,15 @@ $(function() {
 	    }
 	});
 
-	$('.more-links-dropdown .dropdown .dropdown-toggle').on('click', function(e) {
-// 		var dealers = $(this).next('.dealerships');
-
-// 		// dealers.removeClass('mm-outer');
+	$('.more-links-dropdown .dropdown .dropdown-toggle').click(function(e) {
+		var dealers = $(this).next('.dealerships').toggleClass('dealerships-menu-dropped').next('span').toggle();
+// console.log(e);
+// 		// dealers.removeClass('mm-outer');console.l
 // console.log(dealers);
 // 		dealers.next('ul').removeClass('mm-inner-dealerships');
-// 		dealers.css('position', 'relative').slideToggle();
+		// dealers.css('position', 'relative').slideToggle();
 				
-				
+				// alert('ddd');
 		return false;
 		
 	});

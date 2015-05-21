@@ -765,11 +765,38 @@ body {
 
 .mm-outer.dealerships {
 	margin-left: -100px;
+	span {
+		display: none;
+	}
+}
+
+.dealerships-menu-dropped {
+	display: block;
+	position: relative;
+	padding: 0;
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	margin-left: 200px;
+	width: 290px;
+
+	li {
+		
+		padding-left: 90px;
+
+		a {
+			&:first-of-type{
+				border-radius: 0;
+			}
+		}
+	}
 }
 
  .mm-inner-dealerships {
  	list-style: none;
 	padding: 0;
+
+
 
 	li {
 		background: #f6f5f5;

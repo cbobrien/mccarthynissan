@@ -6306,6 +6306,22 @@ body {
 
 .mm-outer.dealerships {
   margin-left: -100px; }
+  .mm-outer.dealerships span {
+    display: none; }
+
+.dealerships-menu-dropped {
+  display: block;
+  position: relative;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin-left: 200px;
+  width: 290px; }
+  .dealerships-menu-dropped li {
+    padding-left: 90px; }
+    .dealerships-menu-dropped li a:first-of-type {
+      border-radius: 0; }
 
 .mm-inner-dealerships {
   list-style: none;
@@ -7139,6 +7155,8 @@ h2.car-name {
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .mm-outer.dealerships span {
+    display: block; }
   .yamm .dropdown.yamm-fw .dropdown-menu.new-car-menu-container {
     height: 430px;
     width: 900px;
