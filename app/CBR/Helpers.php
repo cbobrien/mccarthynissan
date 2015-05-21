@@ -85,7 +85,7 @@ class Helpers {
 								</div>
 							</div>';
 
-				if($ii % 3 == 0) $car_items .= '</div><div class="row">';
+				// if($ii % 3 == 0) $car_items .= '</div><div class="row">';
 				if($ii == $num_cars) $car_items .= '</div>';
 				$ii++;
 				

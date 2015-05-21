@@ -5794,7 +5794,7 @@ body {
   text-shadow: none; }
 
 .yamm .dropdown.yamm-fw .dropdown-menu.new-car-menu-container {
-  height: 385px;
+  height: 405px;
   overflow-y: scroll;
   width: 780px;
   left: auto; }
@@ -5855,7 +5855,7 @@ body {
 
 .dropdown-menu .tab-content .tab-pane, .page-tabs .tab-content .tab-pane {
   background: #ffffff;
-  padding: 20px;
+  padding: 20px 20px 5px 20px;
   border-radius: 0 0 8px 8px; }
 
 .car-menu-item {
@@ -5868,11 +5868,15 @@ body {
     font-variant: small-caps;
     color: #252525;
     font-size: 18px;
-    font-weight: bold; }
+    font-weight: bold;
+    text-align: left;
+    padding-left: 40px; }
   .car-menu-item .price {
     padding-bottom: 10px;
     border-bottom: 1px solid #e9e9e9;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    text-align: left;
+    padding-left: 40px; }
   .car-menu-item img {
     margin-bottom: 20px; }
 
@@ -6277,10 +6281,12 @@ body {
     color: #ffffff; }
 
 .small-button-left {
-  padding: 5px 25px; }
+  padding: 5px 25px;
+  border-radius: 8px 10px 8px 28px; }
 
 .small-button-right {
-  padding: 5px 25px; }
+  padding: 5px 25px;
+  border-radius: 8px 28px 8px 10px; }
 
 .btn-curved {
   border-radius: 8px 10px 8px 28px; }
@@ -7133,13 +7139,8 @@ h2.car-name {
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .car-menu-item h5, .car-menu-item .price {
-    text-align: left;
-    padding-left: 10px; }
   .yamm .dropdown.yamm-fw .dropdown-menu.new-car-menu-container {
-    height: auto;
-    overflow-y: none;
-    overflow: hidden;
+    height: 430px;
     width: 900px;
     left: 0;
     margin: 0 auto; }
@@ -7211,6 +7212,7 @@ h2.car-name {
 @media (min-width: 1200px) {
   .yamm .dropdown.yamm-fw .dropdown-menu.new-car-menu-container {
     width: auto;
+    overflow-y: scroll;
     margin: inherit; }
   .small-button-left {
     border-radius: 8px 10px 8px 28px; }

@@ -79,7 +79,7 @@ body {
 }
 
 .yamm .dropdown.yamm-fw .dropdown-menu.new-car-menu-container {
-	height: 385px;
+	height: 405px;
 	overflow-y: scroll;	
 	width: 780px;
 	left: auto;
@@ -196,7 +196,7 @@ body {
 .dropdown-menu .tab-content .tab-pane,
 .page-tabs .tab-content .tab-pane {
 	background: #ffffff;
-	padding: 20px;
+	padding: 20px 20px 5px 20px;
 	border-radius: 0 0 8px 8px;
 }
 
@@ -213,12 +213,16 @@ body {
 		color: #252525;
 		font-size: 18px;
 		font-weight: bold;
+		text-align: left;
+		padding-left: 40px;
 	}
 
 	.price {
 		padding-bottom: 10px;
 		border-bottom: 1px solid #e9e9e9;
 		margin-bottom: 30px;
+		text-align: left;
+		padding-left: 40px;
 	}
 
 	img {
@@ -716,6 +720,7 @@ body {
 .small-button-left{
 	
 	padding: 5px 25px;
+	border-radius: 8px 10px 8px 28px;
 	//text-shadow: none;	
 
 	// &:hover {
@@ -728,6 +733,7 @@ body {
 .small-button-right{
 	//@include btn-curved-reverse;
 	padding: 5px 25px;
+	border-radius: 8px 28px 8px 10px;
 	//text-shadow: none;
 
 	// &:hover {

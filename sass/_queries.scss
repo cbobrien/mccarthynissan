@@ -145,16 +145,14 @@
 	.car-menu-item {
 		h5,
 		.price {
-			text-align: left;
-			padding-left: 10px;
+			// text-align: left;
+			// padding-left: 10px;
 		}
 	}
 
 
 	.yamm .dropdown.yamm-fw .dropdown-menu.new-car-menu-container {
-		height: auto;
-		overflow-y: none;
-		overflow: hidden;
+		height: 430px;
 		width: 900px;
 		left: 0;
 		margin: 0 auto;
@@ -289,8 +287,10 @@
 @media (min-width: $screen-lg-min) {
 
 	.yamm .dropdown.yamm-fw .dropdown-menu.new-car-menu-container {
-
+	
 		width: auto;
+		overflow-y: scroll;
+		// overflow: hidden;
 		margin: inherit;
 	}
 

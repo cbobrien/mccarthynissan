@@ -5,7 +5,7 @@
 <script src="/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <script src="/js/jquery-ui.min.js"></script>
 <script src="/js/jquery.ui.touch-punch.min.js"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
 <script type="text/javascript" src="/js/jquery.flexslider-min.js"></script>
 <script src="/js/script.js"></script>
 

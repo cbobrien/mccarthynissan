@@ -157,6 +157,7 @@
 @stop
 
 @section('scripts')
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 	<script>
 
 		function initialize() {
