@@ -73,7 +73,7 @@ class Helpers {
 
 				if($ii == 1) $car_items .= '<div class="row">';
 
-				$car_items .= '<div class="col-xs-6 col-md-3">												    
+				$car_items .= '<div class="col-xs-6 col-md-4">												    
 								<div class="car-menu-item">
 									<h5>' . $car->title . '</h5>
 									<p class="price">From: R' . $car->versions()->get()->min('price') . '</p>
@@ -85,7 +85,7 @@ class Helpers {
 								</div>
 							</div>';
 
-				if($ii % 4 == 0) $car_items .= '</div><div class="row">';
+				if($ii % 3 == 0) $car_items .= '</div><div class="row">';
 				if($ii == $num_cars) $car_items .= '</div>';
 				$ii++;
 				
