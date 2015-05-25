@@ -7237,4 +7237,12 @@ h2.car-name {
   .small-button-right {
     border-radius: 8px 28px 8px 10px; } }
 
+@media (min-width: 993px) and (max-width: 1400px) {
+  .search-button {
+    top: 60%;
+    left: 0;
+    width: 80px;
+    bottom: auto;
+    transform: none; } }
+
 /*# sourceMappingURL=style.css.map */

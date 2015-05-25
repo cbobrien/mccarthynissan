@@ -122,7 +122,8 @@
 				<div class="col-xs-6 col-md-3">
 					<h5>More From McCarthy</h5>
 					<ul>
-						<li><a href="http://mccarthy-nissan.pnet.co.za" target="_blank">Careers</a></li>						
+						<li><a href="http://mccarthy-nissan.pnet.co.za" target="_blank">Careers</a></li>
+						<li><a href="/blog" target="_blank">Blog</a></li>						
 					</ul>
 				</div>
 			</div>
@@ -133,8 +134,6 @@
 		<ul class="social-icons">
 			<li><a href="https://www.facebook.com/NissanMcCarthy" class="facebook" target="_blank">Facebook</a></li>
 			<li><a href="https://twitter.com/NissanMcCarthy" class="twitter" target="_blank">Twitter</a></li>
-	{{-- 		<li><a href="" class="google" target="_blank">Google+</a></li>
-			<li><a href="" class="youtube" target="_blank">Youtube</a></li> --}}
 		</ul>
 		<img src="/images/McCarthyBidvest.png" width="100" height="58" alt="McCarthy Bidvest">
 		<p>

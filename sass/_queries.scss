@@ -308,3 +308,15 @@
 	}
 
 }
+
+@media (min-width: 993px) and (max-width: 1400px) {
+
+	.search-button {
+		top: 60%; 
+		left: 0;
+		width: 80px; 
+		bottom: auto;
+		transform: none;
+	}
+
+}
