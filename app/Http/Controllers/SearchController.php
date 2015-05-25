@@ -16,7 +16,7 @@ class SearchController extends Controller {
 
 	public function search($type = 'new', $min, $max, $region = null, $series = null)
 	{
-		
+
 		$dealerships = Dealership::lists('name', 'id');
 
 		switch ($type) {
@@ -77,7 +77,13 @@ class SearchController extends Controller {
 						->select(['specials.specialid as id', 'specials.title as title', 'specials.thumbnail as image'])
 						->orderBy('specials.end', 'asc');
 
-					$cars = $query->paginate(10);
+		
+				if (isset($region) && $region != 'all') 
+					
+					$query->join('dealerships', 'specials.dealercoynumber', '=', 'dealerships.coynumber')
+						  ->where('dealerships.region', '=', $region);
+
+				$cars = $query->paginate(10);
 
 				break;
 
