@@ -39,7 +39,7 @@
 		    oTable = $('#galleryFeatures').DataTable({
 		        "processing": true,
 		        "serverSide": true,
-		        "ajax": "{{ Config::get('app.url') }}/admin/gallery-features/all",
+		        "ajax": "/admin/gallery-features/all",
 		        "columns": [
 		        	{data: 'car_title', name: 'nissan_new_cars.title'},
 		        	{data: 'category_title', name: 'nissan_gallery_categories.title'}, 

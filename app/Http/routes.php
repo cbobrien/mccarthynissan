@@ -41,7 +41,7 @@ Route::get('/search/specials-regions/', ['as' => 'search.specials-regions', 'use
 Route::get('/api/v1/used/{brand}/{type}/{perPage}', ['as' => 'api.used', 'uses' => 'UsedController@index']);
 // Route::get('/api/v1/feedspecials/{brand}/{perPage}', ['as' => 'api.feedspecials', 'uses' => 'FeedSpecialsController@index']);
 
-// Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => 'auth'], function () {
 
 	//admin
 	Route::get('/admin', ['as' => 'admin.home', 'uses' => 'AdminController@index']);
@@ -101,7 +101,7 @@ Route::get('/api/v1/used/{brand}/{type}/{perPage}', ['as' => 'api.used', 'uses' 
 	Route::get('/admin/promotion-enquiries/all', 'Admin\PromotionEnquiriesController@all');
 	Route::resource('/admin/promotion-enquiries', 'Admin\PromotionEnquiriesController', ['except' => ['create', 'store', 'update', 'edit']]);
 
-// });
+});
 
 
 Route::controllers([

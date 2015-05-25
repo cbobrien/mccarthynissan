@@ -19,10 +19,10 @@
 						<table id="versions" class="table table-hover table-striped table-bordered">
 						    <thead>
 						        <tr>						        	
-						            <th class="col-md-10">Title</th>
-						            <th class="col-md-10">Car</th>
-						            <th class="col-md-1 text-center">Edit</th>
-						            <th class="col-md-1 text-center">Delete</th>					         
+						            <th>Title</th>
+						            <th>Car</th>
+						            <th class="text-center">Edit</th>
+						            <th class="text-center">Delete</th>					         
 						        </tr>
 						    </thead>
 						</table>
@@ -39,7 +39,7 @@
 		    oTable = $('#versions').DataTable({
 		        "processing": true,
 		        "serverSide": true,
-		        "ajax": "{{ Config::get('app.url') }}/admin/versions/all",
+		        "ajax": "/admin/versions/all",
 		        "columns": [			        	
 		            {data: 'title', name: 'title'},
 		           	{data: 'car', name: 'car'},

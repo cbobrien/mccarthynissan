@@ -58,10 +58,8 @@ class PromotionsController extends Controller {
 	public function all()
 	{
 		$colours = Promotion::join('nissan_dealerships', 'nissan_promotions.dealership_id', '=', 'nissan_dealerships.id')
-					->select(['nissan_promotions.id as id', 'nissan_promotions.name as name',
-							  'nissan_promotions.image_path as image_path', 'nissan_promotions.created_at as created_at',
-							  'nissan_promotions.published as published', 'nissan_promotions.order as order',
-							  'nissan_promotions.expiry_date as expiry_date',
+					->select(['nissan_promotions.id as id',  'nissan_promotions.image_path as image_path',
+							  'nissan_promotions.created_at as created_at',											  						
 							  'nissan_dealerships.name as dealership_name'])
 					->orderBy('order', 'asc');		
 
@@ -72,7 +70,7 @@ class PromotionsController extends Controller {
 	        				<input name="_method" type="hidden" value="DELETE">	        				
 	        				<a href="#" onclick="confirmSubmit(\'deleteForm{{$id}}\');"><i class="fa fa-trash-o"></i></a>
 	        			</form>')
-	        ->editColumn('image_path','<img src="{{ $image_path }}" style="max-width:300px">')
+	        ->editColumn('image_path','<a href="/admin/promotions/{{$id}}/edit"><img src="{{ $image_path }}" style="max-width:300px"></a>')	      
 	        ->make(true);
 	}
 

@@ -38,7 +38,7 @@
 		        "processing": true,
 		        "serverSide": true,
 		        "ajax": {
-		        		"url": "{{ Config::get('app.url') }}/admin/parts/all",
+		        		"url": "/admin/parts/all",
 		        		"type": "GET"
 		        },
 		        "columns": [

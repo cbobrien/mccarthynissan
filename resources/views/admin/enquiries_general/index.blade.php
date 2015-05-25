@@ -19,8 +19,7 @@
 						        	<th>Date</th>
 						        	<th>Name</th>						       
 						        	<th>Email</th>						            					
-						            <th>Dealership</th>							           
-						            {{-- <th class="col-md-1 text-center">View</th> --}}
+						            <th>Dealership</th>							           			
 						            <th class="col-md-1 text-center">Delete</th>					         
 						        </tr>
 						    </thead>
@@ -38,7 +37,7 @@
 		    oTable = $('#enquiries').DataTable({
 		        "processing": true,
 		        "serverSide": true,
-		        "ajax": "{{ Config::get('app.url') }}/admin/enquiries/all",
+		        "ajax": "/admin/enquiries/all",
 		        "columns": [
 		        	{data: 'created_at', name: 'created_at', searchable: false},
 		        	{data: 'name', name: 'name'},

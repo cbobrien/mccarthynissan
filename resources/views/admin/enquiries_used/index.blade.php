@@ -37,7 +37,7 @@
 		    oTable = $('#enquiries').DataTable({
 		        "processing": true,
 		        "serverSide": true,
-		        "ajax": "{{ Config::get('app.url') }}/admin/used-enquiries/all",
+		        "ajax": "/admin/used-enquiries/all",
 		        "columns": [
 		        	{data: 'created_at', name: 'created_at'},
 		        	{data: 'name', name: 'name'},

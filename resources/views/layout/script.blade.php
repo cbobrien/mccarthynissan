@@ -212,7 +212,7 @@
 			$.ajax({
 	            type: 'GET',           
 	            dataType: 'json',
-	            url: '{{ Config::get('app.url') }}/search/regions/' + selected_type,
+	            url: '/search/regions/' + selected_type,
 	            error: function(jqXHR, exception){
 	                console.log(exception);                
 	            },
@@ -230,7 +230,7 @@
 			$.ajax({
 	            type: 'GET',           
 	            dataType: 'json',
-	            url: '{{ Config::get('app.url') }}/search/series/' + selected_type,
+	            url: '/search/series/' + selected_type,
 	            error: function(jqXHR, exception){
 	                console.log(exception);                
 	            },
@@ -257,7 +257,7 @@
 			$.ajax({
 	            type: 'GET',           
 	            dataType: 'json',
-	            url: '{{ Config::get('app.url') }}/search/specials-regions',
+	            url: '/search/specials-regions',
 	            error: function(jqXHR, exception){
 	                console.log(exception);                
 	            },

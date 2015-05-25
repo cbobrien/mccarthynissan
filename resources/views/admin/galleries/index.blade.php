@@ -19,11 +19,11 @@
 						<table id="galleries" class="table table-hover table-striped table-bordered">
 						    <thead>
 						        <tr>				        	
-						            <th class="col-md-10">Car</th>
-						            <th class="col-md-10">Image</th>
-						            <th class="col-md-10">Type</th>							           
-						            <th class="col-md-1 text-center">Edit</th>
-						            <th class="col-md-1 text-center">Delete</th>					         
+						            <th>Car</th>
+						            <th>Image</th>
+						            <th>Type</th>							           
+						            <th class="text-center">Edit</th>
+						            <th class="text-center">Delete</th>					         
 						        </tr>
 						    </thead>
 						</table>
@@ -40,7 +40,7 @@
 		    oTable = $('#galleries').DataTable({
 		        "processing": true,
 		        "serverSide": true,
-		        "ajax": "{{ Config::get('app.url') }}/admin/galleries/all",
+		        "ajax": "/admin/galleries/all",
 		        "columns": [		        			        
 		            {data: 'title', name: 'title'},
 		           	{data: 'image_path', name: 'image_path', searchable: false},

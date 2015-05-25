@@ -19,11 +19,11 @@
 						<table id="colours" class="table table-hover table-striped table-bordered">
 						    <thead>
 						        <tr>						        	
-						            <th class="col-md-10">Colour</th>
-						            <th class="col-md-10">Code</th>
-						            <th class="col-md-10">Car</th>
-						            <th class="col-md-1 text-center">Edit</th>
-						            <th class="col-md-1 text-center">Delete</th>					         
+						            <th>Colour</th>
+						            <th>Code</th>
+						            <th>Car</th>
+						            <th class="text-center">Edit</th>
+						            <th class="text-center">Delete</th>					         
 						        </tr>
 						    </thead>
 						</table>
@@ -40,7 +40,7 @@
 		    oTable = $('#colours').DataTable({
 		        "processing": true,
 		        "serverSide": true,
-		        "ajax": "{{ Config::get('app.url') }}/admin/colours/all",
+		        "ajax": "/admin/colours/all",
 		        "columns": [			        	
 		            {data: 'colour', name: 'colour'},
 		           	{data: 'colour_code', name: 'colour_code'},

@@ -19,10 +19,10 @@
 						<table id="videos" class="table table-hover table-striped table-bordered">
 						    <thead>
 						        <tr>						        	
-						            <th class="col-md-10">Car</th>
-						            <th class="col-md-10">Video Link</th>
-						            <th class="col-md-1 text-center">Edit</th>
-						            <th class="col-md-1 text-center">Delete</th>					         
+						            <th>Car</th>
+						            <th>Video Link</th>
+						            <th class="text-center">Edit</th>
+						            <th class="text-center">Delete</th>					         
 						        </tr>
 						    </thead>
 						</table>
@@ -39,7 +39,7 @@
 		    oTable = $('#videos').DataTable({
 		        "processing": true,
 		        "serverSide": true,
-		        "ajax": "{{ Config::get('app.url') }}/admin/videos/all",
+		        "ajax": "/admin/videos/all",
 		        "columns": [			        	
 		            {data: 'title', name: 'title'},
 		           	{data: 'video_link', name: 'video_link'},

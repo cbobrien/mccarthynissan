@@ -187,15 +187,7 @@ $(function() {
 
 	$('.more-links-dropdown .dropdown .dropdown-toggle').click(function(e) {
 		var dealers = $(this).next('.dealerships').toggleClass('dealerships-menu-dropped').next('span').toggle();
-// console.log(e);
-// 		// dealers.removeClass('mm-outer');console.l
-// console.log(dealers);
-// 		dealers.next('ul').removeClass('mm-inner-dealerships');
-		// dealers.css('position', 'relative').slideToggle();
-				
-				// alert('ddd');
-		return false;
-		
+		return false;		
 	});
 
 
