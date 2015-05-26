@@ -35,7 +35,7 @@ class PagesController extends Controller {
 	public function newcars()
 	{
 		$categories = Category::with('cars')->get();
-		return view('pages.new-cars')->with(['title' => 'New Cars',
+		return view('pages.new-cars')->with(['title' => 'New Cars at McCarthy Nissan',
 											 'menu' => $this->menu,
 											 'path' => $this->path,
 											 'categories' => $categories,
@@ -236,12 +236,14 @@ class PagesController extends Controller {
 	public function viewCar($type, $vid)
 	{		
 		$car = Used::where('mmbrand', 'NISSAN')->where('vid', $vid)->first();
+
 		if(!$car) return redirect('/');
 		$dealerships = Dealership::lists('name', 'id');
 		return view('pages.view-car')->with(['car' => $car,
 											 'path' => $this->path,
 											 'menu' => $this->menu,
 											 'type' => $type,
+											 'title' => $car->modeldesc,
 											 'dealerships' => $dealerships,
 											 'dealershipMenu' => $this->dealershipMenu]);
 	}
