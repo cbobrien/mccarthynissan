@@ -24,7 +24,12 @@ class PagesController extends Controller {
 
 	public function home()
 	{
-		return view('pages.home')->with('path', '')->with(['menu' => $this->menu, 'dealershipMenu' => $this->dealershipMenu]);
+		return view('pages.home')->with('path', '')->with(['menu' => $this->menu,
+															'dealershipMenu' => $this->dealershipMenu,
+															'title' => 'McCarthy Nissan Cars South Africa',
+															'description' => 'McCarthy Nissan dealerships are all fully equipped to handle both the sale of new, pre-owned vehicles and after sales (Parts and Service). Contact us now.',
+															'keywords' => 'nissan cars'
+														]);
 	}
 
 	public function newcars()
@@ -43,7 +48,8 @@ class PagesController extends Controller {
 		$car = Car::where('id', $id)->with(['versions', 'colours', 'galleries', 'galleryCategories.features'])->first();
 		if(!$car) return redirect('/');
 		return view('pages.new-car')->with(['car' => $car,
-											'title' => $car->title,
+											'title' => $car->title . ' at McCarthy Nissan',
+											'description' => $car->title,
 											'menu' => $this->menu,
 											'path' => $this->path,
 											'dealershipMenu' => $this->dealershipMenu]);
@@ -54,13 +60,16 @@ class PagesController extends Controller {
 		$dealerships = Dealership::lists('name', 'id');
 		$specials = Special::currentSpecials(null, 9);
 		$cars = Used::cars('demo');
-		return view('pages.demos')->with(['title' => 'Demo Cars', 
-											'menu' => $this->menu,
+		return view('pages.demos')->with([	'menu' => $this->menu,
 											'path' => $this->path,
 											'specials' => $specials,
 											'dealerships' => $dealerships,
 											'cars' => $cars,
-											'dealershipMenu' => $this->dealershipMenu]);
+											'dealershipMenu' => $this->dealershipMenu,
+											'title' => 'McCarthy Nissan Demo Cars For Sale',
+											'description' => 'Take a look at some of McCarthy Nissan demo cars for sale.',
+											'keywords' => 'demo cars'
+										]);
 	}
 
 	public function preownedcars()
@@ -68,13 +77,16 @@ class PagesController extends Controller {
 		$dealerships = Dealership::lists('name', 'id');
 		$specials = Special::currentSpecials(null, 9);
 		$cars = Used::cars('preowned');
-		return view('pages.preowned')->with(['title' => 'Pre-owned Cars',
-													'menu' => $this->menu,
-													'path' => $this->path,
-													'specials' => $specials,
-													'dealerships' => $dealerships,
-													'cars' => $cars,
-													'dealershipMenu' => $this->dealershipMenu]);
+		return view('pages.preowned')->with(['menu' => $this->menu,
+											 'path' => $this->path,
+											 'specials' => $specials,
+											 'dealerships' => $dealerships,
+											 'cars' => $cars,
+											 'dealershipMenu' => $this->dealershipMenu,
+											 'title' => 'Buy Pre-Owned Vehicles At McCarthy Nissan Today',
+											 'description' => 'We have a wide selection of pre-owned Nissan vehicles at all our Dealerships. Our dealers will ensure that you get the best deal.',
+											 'keywords' => 'pre-owned vehicles, used vehicles'
+											]);
 	}
 
 	public function testdrive($id = null, $dealership_id = null)
@@ -83,29 +95,43 @@ class PagesController extends Controller {
 		$cars = Car::lists('title', 'id');	
 
 		if(!isset($id) && !isset($dealership_id))
-			return view('pages.test-drive')->with(['cars' => $cars, 'dealership_id' => null, 'car' => null, 'title' => 'Book a Test Drive', 'menu' => $this->menu, 'path' => $this->path, 'dealershipMenu' => $this->dealershipMenu, 'dealerships' => $dealerships]);
+			return view('pages.test-drive')->with(['cars' => $cars, 'dealership_id' => null, 'car' => null, 'title' => 'Book a Test Drive at McCarthy Nissan', 'menu' => $this->menu, 'path' => $this->path, 'dealershipMenu' => $this->dealershipMenu, 'dealerships' => $dealerships]);
 
 		if(isset($id) && $id != 'dealership') {
 			$car = Car::where('id', $id)->with(['versions'])->first();
 			if(!$car) return redirect('/');
 					
-			return view('pages.test-drive')->with(['dealership_id' => null, 'car' => $car, 'title' => 'Book a Test Drive', 'menu' => $this->menu, 'path' => $this->path, 'dealershipMenu' => $this->dealershipMenu, 'dealerships' => $dealerships]);
+			return view('pages.test-drive')->with(['dealership_id' => null, 'car' => $car, 'title' => 'Book a Test Drive at McCarthy Nissan', 'menu' => $this->menu, 'path' => $this->path, 'dealershipMenu' => $this->dealershipMenu, 'dealerships' => $dealerships]);
 		}
 		else {
 			
-			return view('pages.test-drive')->with(['cars' => $cars, 'dealership_id' => $dealership_id, 'title' => 'Book a Test Drive', 'menu' => $this->menu, 'path' => $this->path, 'dealershipMenu' => $this->dealershipMenu, 'dealerships' => $dealerships]);
+			return view('pages.test-drive')->with(['cars' => $cars, 'dealership_id' => $dealership_id, 'title' => 'Book a Test Drive at McCarthy Nissan', 'menu' => $this->menu, 'path' => $this->path, 'dealershipMenu' => $this->dealershipMenu, 'dealerships' => $dealerships]);
 		}
 	}
 
 	public function service($dealer_id = null)
 	{
 		$dealerships = Dealership::lists('name', 'id');
-		return view('pages.service')->with(['dealer_id' => $dealer_id, 'title' => 'Book a Service', 'menu' => $this->menu, 'path' => $this->path, 'dealershipMenu' => $this->dealershipMenu, 'dealerships' => $dealerships]);
+		return view('pages.service')->with(['dealer_id' => $dealer_id,
+											'menu' => $this->menu,
+											'path' => $this->path,
+											'dealershipMenu' => $this->dealershipMenu,
+											'dealerships' => $dealerships,
+											'title' => 'Service Your Vehicle at McCarthy Nissan',
+											'description' => "Service your vehicle with McCarthy Nissan. We don't just give excellent service but build customer relationships to ensure a commitment of a long term purchase.",
+											'keywords' => 'mccarthy nissan service'
+										 ]);
 	}
 
 	public function whymccarthy()
 	{
-		return view('pages.whymccarthy')->with(['title' => 'Why McCarthy', 'menu' => $this->menu, 'path' => $this->path, 'dealershipMenu' => $this->dealershipMenu]);
+		return view('pages.whymccarthy')->with(['menu' => $this->menu,
+											    'path' => $this->path,
+											    'dealershipMenu' => $this->dealershipMenu,
+											    'title' => 'Why Choose McCarthy',
+												'description' => "McCarthy Nissan operates strictly according to the McCarthy values, which guide us in every interaction with our customers, our suppliers, stakeholders and staff members.",
+												'keywords' => 'why mccarthy'
+											   ]);
 	}
 
 	public function specials()
@@ -113,23 +139,33 @@ class PagesController extends Controller {
 		$promotions = Promotion::currentPromotions();
 		$specials = Special::currentSpecials();
 
-		return view('pages.specials')->with(['title' => 'Specials', 
-											  'menu' => $this->menu, 
+		return view('pages.specials')->with(['menu' => $this->menu, 
 											  'path' => $this->path,
 											  'dealershipMenu' => $this->dealershipMenu,
 											  'promotions' => $promotions,
-											  'specials' => $specials]);
+											  'specials' => $specials,
+											  'title' => 'Nissan Specials from McCarthy Dealers South Africa',
+											  'description' => 'With a wide selection of cars to choose from, you are assured of a great deal. All McCarthy Nissan dealers participate and offers are subject to stock availability.',
+											  'keywords' => 'mccarthy nissan specials'
+											 ]);
 	}
 
-	public function special()
-	{
-		return view('pages.special')->with(['title' => 'Special', 'menu' => $this->menu, 'path' => $this->path, 'dealershipMenu' => $this->dealershipMenu]);
-	}
+	// public function special()
+	// {
+	// 	return view('pages.special')->with(['title' => 'Special', 'menu' => $this->menu, 'path' => $this->path, 'dealershipMenu' => $this->dealershipMenu]);
+	// }
 
 	public function parts()
 	{
 		$dealerships = Dealership::lists('name', 'id');
-		return view('pages.parts')->with(['title' => 'Parts & Accessories', 'menu' => $this->menu, 'path' => $this->path, 'dealerships' => $dealerships, 'dealershipMenu' => $this->dealershipMenu]);
+		return view('pages.parts')->with(['menu' => $this->menu,
+										  'path' => $this->path,
+										  'dealerships' => $dealerships,
+										  'dealershipMenu' => $this->dealershipMenu,
+										  'title' => 'Nissan Car Parts For Sale at McCarthy Dealerships Near You',
+									      'description' => 'With our service and parts team you can rest assured that your vehicle will be maintained and fitted with genuine parts.',
+									      'keywords' => 'mccarthy nissan parts'
+										]);
 	}
 
 	public function enquire($id)
@@ -143,7 +179,14 @@ class PagesController extends Controller {
 	public function contact()
 	{
 		$dealerships = Dealership::lists('name', 'id');
-		return view('pages.contact')->with(['title' => 'Contact', 'menu' => $this->menu, 'path' => $this->path, 'dealerships' => $dealerships, 'dealershipMenu' => $this->dealershipMenu]);
+		return view('pages.contact')->with(['menu' => $this->menu,
+											'path' => $this->path,
+											'dealerships' => $dealerships,
+											'dealershipMenu' => $this->dealershipMenu,
+											'title' => 'Contact McCarthy Nissan Dealerships Near You',
+											'description' => 'Drive away with a new or used Nissan. Contact McCarthy Nissan today!',
+											'keywords' => 'contact mccarthy nissan'
+										  ]);
 	}
 
 	public function dealership($id)
@@ -152,11 +195,40 @@ class PagesController extends Controller {
 		$coynumber = Dealership::getCoyById($id);
 		$specials = Special::currentSpecials($coynumber, 2);
 		
+		switch($dealership->name) {
+
+			case 'McCarthy Nissan Gateway':
+				$description = 'Located in the northern part of Durban, we are conveniently situated. We provide a full dealership experience at Nissan gateway.';
+				break;
+
+			case 'McCarthy Nissan Germiston':
+				$description = 'Our Germiston branch is located on Refinery Road, convenient for all East Rand Clients. We are a full service dealership and our friendly stalff will welcome you.';
+				break;
+				
+			case 'McCarthy Nissan Johannesburg':
+				$description = 'McCarthy Nissan Johannesburg has a good sales history. Located on End Street we are central to all clients within the city of gold. GPS coordinates available online.';
+				break;
+
+			case 'McCarthy Nissan Randburg':
+				$description = 'At McCarthy Nissan Randburg we aim to serve the Fourways and greater Randburg areas. We are a full service dealership and have friendly staff as standard.';
+				break;
+
+			case 'McCarthy Nissan Woodmead':
+				$description = 'The Woodmead dealership aims to serve the Sandton and Midrand clients. McCarthy Nissan takes pride in offering full service and a wide variety of vehicles at this dealership.';
+				break;
+
+			default:
+				$description = '';	
+
+		}
+
 		if(!$dealership) return redirect('/');
-		return view('pages.dealership')->with(['title' => $dealership->name, 
-												'path' => $this->path,
-												'menu' => $this->menu,
-												'dealership' => $dealership,
+		return view('pages.dealership')->with(['title' => $dealership->name,
+											   'description' => $description,
+											   'keywords' => $dealership->name,
+											   'path' => $this->path,
+											   'menu' => $this->menu,
+											   'dealership' => $dealership,
 												'specials' => $specials,											
 												'dealershipMenu' => $this->dealershipMenu]);
 	}
@@ -189,7 +261,9 @@ class PagesController extends Controller {
 											'demos' => $demos,
 											'preowneds' => $preowneds,
 											'dealerships' => $dealerships,
-											'dealershipMenu' => $this->dealershipMenu]);
+											'dealershipMenu' => $this->dealershipMenu,
+											'title' => $dealership->name . ' Stock'
+										]);
 	}
 	
 }

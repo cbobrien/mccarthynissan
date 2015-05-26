@@ -6,8 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="robots" content="noindex">
 	<meta name="csrf-token" content="{{ csrf_token() }}" />
-	<title>{{{ isset($title) ? ucwords(strtolower($title)) . ' | ' : '' }}}McCarthy Nissan</title>
-{{-- 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> --}}
+	<title>{{ $title or '' }}</title>
+	<meta name="description" content="{{ $description or '' }}">
+	<meta name="keywords" content="{{ $keywords or '' }}">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/css/jquery-ui.min.css">
 	<link rel="stylesheet" href="/css/yamm.css">
 	<link rel="stylesheet" href="/css/bootstrap-select.min.css">
