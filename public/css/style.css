@@ -7156,7 +7156,7 @@ h2.car-name {
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .mm-outer.dealerships span {
-    display: block; }
+    display: table-cell; }
   .yamm .dropdown.yamm-fw .dropdown-menu.new-car-menu-container {
     height: 430px;
     width: 900px;
