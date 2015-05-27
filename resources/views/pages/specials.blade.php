@@ -64,7 +64,7 @@
 														data-promotion-id="{{ $promotion->id }}"
 														data-promotion-name="{{ $promotion->name }}">
 												<img src="{{ $promotion->image_path }}" alt="{{ $promotion->name }}" class="img-responsive">
-											</a>
+											</a>										
 											<div class="promotion-caption">
 												<p>{{ html_entity_decode($promotion->name) }}</p>												
 														<a href="#" class="btn btn-red left-top-radius" 
@@ -72,7 +72,7 @@
 															data-target="#modalPromotion"									
 															data-promotion-id="{{ $promotion->id }}"
 															data-promotion-name="{{ $promotion->name }}">Enquire</a>		
-											  			<a href="/dealership/'. $promotion->dealership_id .'" class="btn btn-grey right-bottom-radius">Visit Dealership</a>										  			
+											  			<a href="/dealership/{{ $promotion->dealership_id }}" class="btn btn-grey right-bottom-radius">Visit Dealership</a>										  			
 												{{-- <a href="/dealership/{{ $promotion->dealership_id }}">{{ $promotion->dealership_name }}</a> --}}
 											
 											</div>
