@@ -5881,7 +5881,7 @@ body {
     margin-bottom: 20px; }
 
 .page-heading {
-  font-size: 60px;
+  font-size: 40px;
   font-family: 'nissanregular', Verdana, sans-serif;
   font-variant: small-caps;
   letter-spacing: 0.02em; }
@@ -6993,18 +6993,23 @@ h2.car-name {
 .promotion-container {
   margin-bottom: 30px; }
   .promotion-container img {
-    transition: all 1.5s; }
+    transition: all .5s; }
     .promotion-container img:hover {
-      -webkit-filter: hue-rotate(180deg);
-      filter: hue-rotate(180deg); }
+      -webkit-filter: grayscale(0.3);
+      filter: grayscale(0.3); }
 
 .special-container {
   margin-bottom: 30px; }
   .special-container img {
-    transition: all 1.5s; }
+    transition: all .5s; }
     .special-container img:hover {
-      -webkit-filter: hue-rotate(180deg);
-      filter: hue-rotate(180deg); }
+      -webkit-filter: grayscale(0.3);
+      filter: grayscale(0.3); }
+
+.new-cars .car-menu-item h5 {
+  padding-left: 0; }
+.new-cars .price {
+  padding-left: 0; }
 
 .promotion-caption {
   transition: all .2s;

@@ -2,7 +2,7 @@
 
 @section('content')
 
-	<div class="copy-container">
+	<div class="copy-container new-cars">
 		<div class="container">
 			<h1 class="page-heading">New Cars</h1>
 			<div class="row">				
@@ -26,10 +26,10 @@
 												<div class="car-menu-item">
 													<h5>' . $car->title . '</h5>
 													<p class="price">From: R' . $car->versions()->get()->min('price') . '</p>
-													<img src="' . $car->image_path . '" alt="' . $car->title .'">
+													<img src="' . $car->image_path . '" alt="' . $car->title .'" class="img-responsive">
 													<p>
-														<a href="/new-car/' . $car->id .'" class="btn btn-grey small-button-left" role="button">View</a>
-														<a href="/test-drive/' . $car->id .'" class="btn btn-grey small-button-right" role="button">Test Drive</a>
+														<a href="/new-car/' . $car->id .'" class="btn btn-grey btn-block" role="button">View</a>
+														<a href="/test-drive/' . $car->id .'" class="btn btn-grey btn-block" role="button">Test Drive</a>
 													</p>
 												</div>
 											</div>';

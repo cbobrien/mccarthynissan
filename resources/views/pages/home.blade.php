@@ -3,7 +3,7 @@
 @section('content')
 
 	
-	<div class="banner-container">
+	<div class="banner-container hidden-xs">
 		<div class="banner">
 			<ul>
 				<li data-transition="incube-horizontal" data-slotamount="7">
@@ -168,7 +168,7 @@
 	<div class="calls-to-action" style="padding:60px 0">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-4 col-lg-3">
+				<div class="col-xs-12 col-sm-4 col-lg-3">
 					<a href="/test-drive" class="cta-container">
 						<div class="c2a-image">
 							<img src="/images/c2a/car.png" alt="Book a Test Drive" class="img-responsive">
@@ -179,7 +179,7 @@
 						</div>
 					</a>			
 				</div>
-				<div class="col-xs-4 col-lg-3">
+				<div class="col-xs-12 col-sm-4 col-lg-3">
 					<a href="/service" class="cta-container">
 						<div class="c2a-image text-center">
 							<img src="/images/c2a/service.png" alt="Book a Service" class="">
@@ -190,7 +190,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-xs-4 col-lg-3">
+				<div class="col-xs-12 col-sm-4 col-lg-3">
 					<a href="/contact" class="cta-container">
 						<div class="c2a-image">
 							<img src="/images/c2a/car3.png" alt="Make an Enquiry" class="img-responsive">
@@ -203,8 +203,7 @@
 				</div>
 				<div class="col-lg-3 visible-lg">
 					<div class="cta-container">
-						<div class="ct2-title mccarthy-title">
-						{{-- 	<div class="c2a-icon why-mccarthy"></div> --}}
+						<div class="ct2-title mccarthy-title">						
 							<div class="c2a-name why-mccarthy">Why Choose McCarthy</div>
 						</div>
 						<div class="c2a-image mccarthy-block">

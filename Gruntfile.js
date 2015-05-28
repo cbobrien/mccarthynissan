@@ -20,7 +20,10 @@ module.exports = function(grunt) {
       grunt: { files: ['Gruntfile.js'] },
       sass: {
         files: ['sass/**/*.scss', 'public/**/*.scss'],
-        tasks: ['sass']
+        tasks: ['sass'],
+        options: {
+          nospawn: true
+        }
       }
     }
   });

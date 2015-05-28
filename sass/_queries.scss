@@ -1,10 +1,22 @@
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
+// @media (max-width: $screen-sm-min) {
 
+// 	.new-cars {
+// 		h5 {
+// 			padding-left: 0;
+// 		}
 
+// 		.price {
+// 			padding-left: 0;
+// 		}
+// 	}
+// }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: $screen-sm-min) {
+
+	
 
 	// .navbar-nav .dropdown-menu {
 	// 	margin-left: -87px;

@@ -231,7 +231,7 @@ body {
 }
 
 .page-heading {
-	font-size: 60px;
+	font-size: 40px;
 	font-family: $font-family-nissan;
 	font-variant: small-caps;
 	letter-spacing: 0.02em;
@@ -264,6 +264,8 @@ body {
 		padding-left:0;
 	}
 }
+
+
 
 .carousel {
 
@@ -1847,11 +1849,11 @@ h2.car-name {
 
 	img {
 
-		transition: all 1.5s;
+		transition: all .5s;
 
 		&:hover {
-			-webkit-filter: hue-rotate(180deg);
-			filter: hue-rotate(180deg);
+			-webkit-filter: grayscale(0.3);
+			filter: grayscale(0.3);
 		}
 	}
 }
@@ -1861,15 +1863,24 @@ h2.car-name {
 
 	img {
 
-		transition: all 1.5s;
+		transition: all .5s;
 
 		&:hover {
-			-webkit-filter: hue-rotate(180deg);
-			filter: hue-rotate(180deg);
+			-webkit-filter: grayscale(0.3);
+			filter: grayscale(0.3);
 		}
 	}
 }
 
+.new-cars {
+	.car-menu-item h5 {
+		padding-left: 0;
+	}
+
+	.car-menu-item .price {
+		padding-left: 0;
+	}
+}
 
 .promotion-caption {
 
