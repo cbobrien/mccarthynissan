@@ -19,7 +19,7 @@
 						<table id="versions" class="table table-hover table-striped table-bordered">
 						    <thead>
 						        <tr>						        	
-						            <th>Title</th>
+						            <th>Version</th>
 						            <th>Car</th>
 						            <th class="text-center">Edit</th>
 						            <th class="text-center">Delete</th>					         
@@ -41,8 +41,8 @@
 		        "serverSide": true,
 		        "ajax": "/admin/versions/all",
 		        "columns": [			        	
-		            {data: 'title', name: 'title'},
-		           	{data: 'car', name: 'car'},
+		            {data: 'title', name: 'nissan_new_car_versions.title'},
+		           	{data: 'car', name: 'nissan_new_cars.title'},
 		            {data: 'edit', name: 'edit', orderable: false, searchable: false, class: 'text-center'},
 		            {data: 'delete', name: 'delete', orderable: false, searchable: false, class: 'text-center'}       
 		        ]

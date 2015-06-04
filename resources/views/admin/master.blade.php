@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="/css/admin/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/css/jquery-ui.min.css">
 	
+	
 <!-- 	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css"> -->
 	<link rel="stylesheet" href="/plugins/datatables/dataTables.bootstrap.css">
 	<link rel="stylesheet" href="/css/admin/AdminLTE.min.css">
