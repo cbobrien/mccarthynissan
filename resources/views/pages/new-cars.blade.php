@@ -25,7 +25,7 @@
 									echo '<div class="col-xs-6 col-md-3">												    
 												<div class="car-menu-item">
 													<h5>' . $car->title . '</h5>
-													<p class="price">From: R' . $car->versions()->get()->min('price') . '</p>
+													<p class="price">From: R' . number_format($car->versions()->get()->min('price')) . '</p>
 													<img src="' . $car->image_path . '" alt="' . $car->title .'" class="img-responsive">
 													<p>
 														<a href="/new-car/' . $car->id .'" class="btn btn-grey btn-block" role="button">View</a>
