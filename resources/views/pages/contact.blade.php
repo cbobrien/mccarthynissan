@@ -49,7 +49,7 @@
 					<div class="col-xs-12 hidden-xs col-sm-offset-1 col-sm-5">										
 						<img src="/images/cars/x-trail.jpg" style="margin-top:80px" class="img-responsive" alt="Contact">					
 					</div>																																
-				</div
+				</div>
 			</div>
 		</div>
 	</div>	
