@@ -52,6 +52,8 @@
 
 					@if (count($specials) > 0)
 
+						{{-- {{ count($specials) }} --}}
+
 						<?php
 							$i = 1;
 							$j = 1;
@@ -103,7 +105,7 @@
 @stop
 
 
-@if ($num_specials != 0)
+@if (count($specials) > 0)
 
 	@section('scripts')
 		<script>

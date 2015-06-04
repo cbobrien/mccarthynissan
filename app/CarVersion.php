@@ -12,10 +12,10 @@ class CarVersion extends Model {
 		return $this->belongsTo('App\Car');
 	}
 
-	public function getPriceAttribute($value)
-	{
-		return number_format($value);
-	}
+	// public function getPriceAttribute($value)
+	// {
+	// 	return number_format($value);
+	// }
 
 
 	public static function getNameById($id)

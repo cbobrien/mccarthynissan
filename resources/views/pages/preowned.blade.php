@@ -101,7 +101,7 @@
 	</div>
 @stop
 
-@if ($num_specials != 0)
+@if (count($specials) > 0)
 
 	@section('scripts')
 		<script>

@@ -103,7 +103,7 @@
 							<div class="col-sm-4">
 								<div class="version-container">
 									<h4>{{ $version->title }}</h4>
-									<p class="price">R{{ $version->price }}</p>
+									<p class="price">R{{ number_format($version->price) }}</p>
 									<p class="description">								
 										{!!html_entity_decode($version->features_1)!!}
 									</p>

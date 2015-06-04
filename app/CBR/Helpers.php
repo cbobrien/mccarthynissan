@@ -76,7 +76,7 @@ class Helpers {
 				$car_items .= '<div class="col-xs-6 col-md-4">												    
 								<div class="car-menu-item">
 									<h5>' . $car->title . '</h5>
-									<p class="price">From: R' . $car->versions()->get()->min('price') . '</p>
+									<p class="price">From: R' . number_format($car->versions()->get()->min('price')) . '</p>
 									<img src="' . $car->image_path . '" alt="' . $car->title .'">
 									<p>
 										<a href="/new-car/' . $car->id .'/'. strtolower(str_replace(' ', '-', $car->title)) .'" class="btn btn-grey small-button-left" role="button">View</a>
