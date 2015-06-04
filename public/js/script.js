@@ -192,7 +192,7 @@ $(function() {
 
 
 	//accordion
-	$('.copy-accordion').find('h4').first().addClass('active');
+	// $('.copy-accordion').find('h4').first().addClass('active');
 
 	$('.copy-accordion').find('h4').click(function() {
 	    $(this).toggleClass('active');

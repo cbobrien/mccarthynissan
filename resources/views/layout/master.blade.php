@@ -47,7 +47,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<div class="page-title hidden-xs">{{ isset($title) ? ucwords(strtolower($title)) : 'McCarthy Nissan' }}</div>
+				<div class="page-title">{{ $title or '' }}</div>
 				<a class="navbar-brand {{ ($path != '') ? 'active' : '' }}" href="/">McCarthy Nissan</a>
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

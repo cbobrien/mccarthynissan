@@ -6083,8 +6083,6 @@ body {
   display: none;
   padding: 30px 20px;
   background: #ffffff; }
-  .copy-accordion > div:first-of-type {
-    display: block; }
 
 .copy-accordion > div.default {
   display: block; }
@@ -7008,7 +7006,7 @@ h2.car-name {
 
 .new-cars .car-menu-item h5 {
   padding-left: 0; }
-.new-cars .price {
+.new-cars .car-menu-item .price {
   padding-left: 0; }
 
 .promotion-caption {
