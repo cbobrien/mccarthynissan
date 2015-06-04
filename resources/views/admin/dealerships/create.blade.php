@@ -117,14 +117,21 @@
 						<div class="form-group">											
 							<label for="blurb" class="col-md-4 control-label">Specials Enquiries</label>
 							<div class="col-md-6">
-								{!! Form::textarea('emails_preowned', null, ['class' => 'form-control']) !!}
+								{!! Form::textarea('emails_specials', null, ['class' => 'form-control']) !!}
+							</div>
+						</div>
+
+						<div class="form-group">											
+							<label for="blurb" class="col-md-4 control-label">Promotions Enquiries</label>
+							<div class="col-md-6">
+								{!! Form::textarea('emails_promotions', null, ['class' => 'form-control']) !!}
 							</div>
 						</div>
 
 						<div class="form-group">											
 							<label for="blurb" class="col-md-4 control-label">Pre-owned Enquiries</label>
 							<div class="col-md-6">
-								{!! Form::textarea('emails_specials', null, ['class' => 'form-control']) !!}
+								{!! Form::textarea('emails_preowned', null, ['class' => 'form-control']) !!}
 							</div>
 						</div>
 

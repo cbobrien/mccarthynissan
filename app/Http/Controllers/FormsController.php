@@ -76,7 +76,7 @@ class FormsController extends Controller {
 				 'parts_info' => trim($request->parts_info),
 				 'contact_time' => trim($request->contact_time),
 				 'admin_to' => Dealership::getEmails($request->dealership_id, 'emails_dealer_principal'), 
-				 'admin_cc' => Dealership::getEmails($request->dealership_id, 'emails_general_enquiries'), 
+				 'admin_cc' => Dealership::getEmails($request->dealership_id, 'emails_parts'), 
 				 'subject' => 'Parts Enquiry'];
 
 		if (trim($data['admin_to']) == '')
@@ -108,7 +108,7 @@ class FormsController extends Controller {
 				 'service_date' => Carbon::parse(trim($request->date))->format('d-m-Y'),
 				 'contact_time' => trim($request->contact_time),
 				 'admin_to' => Dealership::getEmails($request->dealership_id, 'emails_dealer_principal'), 
-				 'admin_cc' => Dealership::getEmails($request->dealership_id, 'emails_general_enquiries'), 
+				 'admin_cc' => Dealership::getEmails($request->dealership_id, 'emails_service'), 
 				 'subject' => 'Service Enquiry'];
 
 		if (trim($data['admin_to']) == '')
@@ -135,7 +135,7 @@ class FormsController extends Controller {
 				 'test_drive_date' => Carbon::parse(trim($request->test_drive_date))->format('d-m-Y'),
 				 'contact_time' => trim($request->contact_time),
 				 'admin_to' => Dealership::getEmails($request->dealership_id, 'emails_dealer_principal'), 
-				 'admin_cc' => Dealership::getEmails($request->dealership_id, 'emails_general_enquiries'), 
+				 'admin_cc' => Dealership::getEmails($request->dealership_id, 'emails_test_drive'), 
 				 'subject' => 'Test Drive Enquiry'];
 
 		if (trim($data['admin_to']) == '')
@@ -161,7 +161,7 @@ class FormsController extends Controller {
 				 'time' => date('G:i'),							
 				 'message' => trim($request->message),
 				 'admin_to' => Dealership::getEmails($request->dealership_id, 'emails_dealer_principal'), 
-				 'admin_cc' => Dealership::getEmails($request->dealership_id, 'emails_general_enquiries'), 
+				 'admin_cc' => Dealership::getEmails($request->dealership_id, 'emails_new'), 
 				 'subject' => 'New Car Enquiry'];
 
 		if (trim($data['admin_to']) == '')
@@ -176,6 +176,13 @@ class FormsController extends Controller {
 	{	
 		UsedEnquiry::create($request->all());
 
+		if($request->enquiry_type == 'demo') {
+			$admin_cc = 'emails_demo';
+		}
+		else {
+			$admin_cc = 'emails_preowned';
+		}
+
 		$data = ['dealership' => Dealership::getNameById($request->dealership_id),
 				 'car' => Used::getNameById($request->vid),
 				 'firstname' => trim($request->firstname), 
@@ -186,7 +193,7 @@ class FormsController extends Controller {
 				 'date' => date('d F Y'), 
 				 'time' => date('G:i'),				 
 				 'admin_to' => Dealership::getEmails($request->dealership_id, 'emails_dealer_principal'), 
-				 'admin_cc' => Dealership::getEmails($request->dealership_id, 'emails_general_enquiries'), 
+				 'admin_cc' => Dealership::getEmails($request->dealership_id, $admin_cc), 
 				 'subject' => ucfirst($request->enquiry_type) . ' Car Enquiry'];
 
 		if (trim($data['admin_to']) == '')
@@ -214,7 +221,7 @@ class FormsController extends Controller {
 				 'date' => date('d F Y'), 
 				 'time' => date('G:i'),				 
 				 'admin_to' => Dealership::getEmails($dealership->id, 'emails_dealer_principal'), 
-				 'admin_cc' => Dealership::getEmails($dealership->id, 'emails_general_enquiries'), 
+				 'admin_cc' => Dealership::getEmails($dealership->id, 'emails_specials'), 
 				 'subject' => 'Special Enquiry'];
 
 		if (trim($data['admin_to']) == '')
@@ -241,7 +248,7 @@ class FormsController extends Controller {
 				 'date' => date('d F Y'), 
 				 'time' => date('G:i'),				 
 				 'admin_to' => Dealership::getEmails($dealership_id, 'emails_dealer_principal'), 
-				 'admin_cc' => Dealership::getEmails($dealership_id, 'emails_general_enquiries'), 
+				 'admin_cc' => Dealership::getEmails($dealership_id, 'emails_promotions'), 
 				 'subject' => 'Promtion Enquiry'];
 
 		if (trim($data['admin_to']) == '')

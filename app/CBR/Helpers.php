@@ -15,10 +15,13 @@ class Helpers {
 	{
 		Mail::send('emails.' . $view, $data, function($message) use ($data)
 		{
+			$cc_array = explode(';',trim($data['admin_cc']));
+			array_push($cc_array, 'leads@cbrmarketing.co.za');
+			array_push($cc_array, 'connoro@cbrmarketing.co.za');
 
 		    $message->from($data['email'], $data['firstname'] . ' ' . $data['surname']);
 		    $message->subject($data['subject'] . ' from McCarthy Nissan website');
-		    $message->to($data['admin_to'])->cc(explode(';',$data['admin_cc']));
+		    $message->to($data['admin_to'])->cc($cc_array);
 		});
 	}
 

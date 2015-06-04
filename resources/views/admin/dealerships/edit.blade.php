@@ -118,14 +118,21 @@
 						<div class="form-group">											
 							<label for="blurb" class="col-md-4 control-label">Specials Enquiries</label>
 							<div class="col-md-6">
-								{!! Form::textarea('emails_preowned', $dealership->emails_preowned, ['class' => 'form-control']) !!}
+								{!! Form::textarea('emails_specials', $dealership->emails_specials, ['class' => 'form-control']) !!}
+							</div>
+						</div>
+
+						<div class="form-group">											
+							<label for="blurb" class="col-md-4 control-label">Promotions Enquiries</label>
+							<div class="col-md-6">
+								{!! Form::textarea('emails_promotions', $dealership->emails_promotions, ['class' => 'form-control']) !!}
 							</div>
 						</div>
 
 						<div class="form-group">											
 							<label for="blurb" class="col-md-4 control-label">Pre-owned Enquiries</label>
 							<div class="col-md-6">
-								{!! Form::textarea('emails_specials', $dealership->emails_specials, ['class' => 'form-control']) !!}
+								{!! Form::textarea('emails_preowned', $dealership->emails_preowned, ['class' => 'form-control']) !!}
 							</div>
 						</div>
 

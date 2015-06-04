@@ -8,7 +8,7 @@ class Dealership extends Model {
 	protected $table = 'nissan_dealerships';
 	protected $fillable = ['name', 'address', 'longitude', 'latitude', 'tel', 'fax', 'hours', 'blurb', 'image_path', 'coynumber',
 							'emails_new', 'emails_demo', 'emails_preowned', 'emails_specials', 'emails_service', 'emails_parts',
-							'emails_test_drive', 'emails_general_enquiries', 'emails_dealer_principal'];
+							'emails_test_drive', 'emails_general_enquiries', 'emails_dealer_principal', 'emails_promotions'];
 
 	public function promotions()
 	{
