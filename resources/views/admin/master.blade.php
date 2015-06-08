@@ -70,9 +70,6 @@
 		                	<li class="header">Gallery Features</li>
 		                	<li><a href="{{ URL::route('admin.gallery-features.index') }}"><i class="fa fa-circle-o"></i> List Gallery Features</a></li>
 		                	<li><a href="{{ URL::route('admin.gallery-features.create') }}"><i class="fa fa-circle-o"></i> Add Gallery Feature</a></li>
-		                	{{-- <li class="header">Videos</li>
-		                	<li><a href="{{ URL::route('admin.videos.index') }}"><i class="fa fa-circle-o"></i> List Videos</a></li>
-		                	<li><a href="{{ URL::route('admin.videos.create') }}"><i class="fa fa-circle-o"></i> Add Videos</a></li> --}}
 		              	</ul>
 		              											
 					</li>					
@@ -124,7 +121,6 @@
 	<script src="/js/jquery-ui.min.js"></script>
 	<script src="/bower/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
 	<script src="/plugins/datatables/jquery.dataTables.min.js"></script>
-    {{-- <script src="/plugins/datatables/dataTables.bootstrap.js"></script> --}}
 	<script src="/js/admin/slimScroll/jquery.slimScroll.min.js"></script>
 	<script src="/js/admin/app.min.js"></script>
 	<script src="/js/admin/admin.js"></script>

@@ -42,7 +42,8 @@
             success: function(data) {
             	console.log(data);
             	var message = 'Thank you for your enquiry. We will be in touch shortly.';
-            	enquireResponseActions('ajax-message', message, 'alert-success', that, 'enquireForm', true, 0);	  
+            	enquireResponseActions('ajax-message', message, 'alert-success', that, 'enquireForm', true, 0);
+            	ga('send', 'event', 'Submit Button Nissan Website', 'Submission Successful', 'Forms - Nissan');  
             }
         });        
 	});
@@ -87,7 +88,8 @@
             success: function(data) {
             	console.log(data);
             	var message = 'Thank you for your enquiry. We will be in touch shortly.';
-            	specialResponseActions('ajax-message', message, 'alert-success', that, 'enquireForm', true, 0);	  
+            	specialResponseActions('ajax-message', message, 'alert-success', that, 'enquireForm', true, 0);
+            	ga('send', 'event', 'Submit Button Nissan Website', 'Submission Successful', 'Forms - Nissan');  
             }
         });        
 	});
@@ -131,7 +133,8 @@
             success: function(data) {
             	console.log(data);
             	var message = 'Thank you for your enquiry. We will be in touch shortly.';
-            	promotionResponseActions('ajax-message', message, 'alert-success', that, 'promotionForm', true, 0);	  
+            	promotionResponseActions('ajax-message', message, 'alert-success', that, 'promotionForm', true, 0);
+            	ga('send', 'event', 'Submit Button Nissan Website', 'Submission Successful', 'Forms - Nissan');	  
             }
         });        
 	});

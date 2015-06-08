@@ -75,7 +75,7 @@
 								@if (trim($car->brochure_link) != '')
 									<li><a href="{{ $car->brochure_link }}" class="btn btn-outline hidden-xs" target="_blank">Brochure</a></li>
 								@endif
-								@if (trim($car->brochure_link) != '')
+								@if (trim($car->specifications_link) != '')
 									<li><a href="{{ $car->specifications_link }}" class="btn btn-outline hidden-xs" target="_blank">Tech Specs</a></li>
 								@endif
 							</ul>					
@@ -137,7 +137,7 @@
 								@if (trim($car->brochure_link) != '')								
 									<a href="{{ $car->brochure_link }}" class="btn btn-red btn-min-2">Download the Brochure</a>
 								@endif
-								@if (trim($car->brochure_link) != '')								
+								@if (trim($car->specifications_link) != '')								
 									<a href="{{ $car->specifications_link }}" class="btn btn-red btn-min-2">Download the Tech Specs</a>
 								@endif							
 							</div>

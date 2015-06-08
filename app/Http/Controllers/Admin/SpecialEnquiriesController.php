@@ -29,7 +29,7 @@ class SpecialEnquiriesController extends Controller {
 	public function destroy(SpecialEnquiry $enquiry)
 	{
 		$enquiry->delete();
-		return redirect()->route('admin.enquiries_specials.index')->with('message', 'Special enquiry deleted');
+		return redirect()->route('admin.enquiries-specials.index')->with('message', 'Special enquiry deleted');
 	}
 
 	public function all() {

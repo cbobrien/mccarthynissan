@@ -1852,8 +1852,7 @@ h2.car-name {
 		transition: all .5s;
 
 		&:hover {
-			-webkit-filter: grayscale(0.3);
-			filter: grayscale(0.3);
+			opacity: 0.9;
 		}
 	}
 }
@@ -1866,8 +1865,7 @@ h2.car-name {
 		transition: all .5s;
 
 		&:hover {
-			-webkit-filter: grayscale(0.3);
-			filter: grayscale(0.3);
+			opacity: 0.9;
 		}
 	}
 }
@@ -1978,8 +1976,7 @@ h2.car-name {
 		transition: all 1.5s;
 
 		&:hover {
-			-webkit-filter: hue-rotate(180deg);
-			filter: hue-rotate(180deg);
+			opacity: 0.9;
 		}		
 	}
 
@@ -1990,8 +1987,7 @@ h2.car-name {
 			transition: all 1.5s;
 
 			&:hover {
-				-webkit-filter: hue-rotate(180deg);
-				filter: hue-rotate(180deg);
+				opacity: 0.9;
 			}			
 		}
 	}

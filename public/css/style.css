@@ -6993,16 +6993,14 @@ h2.car-name {
   .promotion-container img {
     transition: all .5s; }
     .promotion-container img:hover {
-      -webkit-filter: grayscale(0.3);
-      filter: grayscale(0.3); }
+      opacity: 0.9; }
 
 .special-container {
   margin-bottom: 30px; }
   .special-container img {
     transition: all .5s; }
     .special-container img:hover {
-      -webkit-filter: grayscale(0.3);
-      filter: grayscale(0.3); }
+      opacity: 0.9; }
 
 .new-cars .car-menu-item h5 {
   padding-left: 0; }
@@ -7055,15 +7053,13 @@ h2.car-name {
   margin-bottom: 15px;
   transition: all 1.5s; }
   .search-page .special-thumb:hover, .used-page .special-thumb:hover {
-    -webkit-filter: hue-rotate(180deg);
-    filter: hue-rotate(180deg); }
+    opacity: 0.9; }
 .search-page .specials, .used-page .specials {
   margin-top: 80px; }
   .search-page .specials img, .used-page .specials img {
     transition: all 1.5s; }
     .search-page .specials img:hover, .used-page .specials img:hover {
-      -webkit-filter: hue-rotate(180deg);
-      filter: hue-rotate(180deg); }
+      opacity: 0.9; }
 .search-page .used-car-image-container img, .used-page .used-car-image-container img {
   border: 10px solid #fff; }
 .search-page .description, .used-page .description {

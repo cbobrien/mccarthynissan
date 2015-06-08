@@ -135,7 +135,8 @@
 	            success: function(data) {
 	            	console.log(data);
 	            	var message = 'Thank you for your enquiry. We will be in touch shortly.';
-	            	responseActions('ajax-message', message, 'alert-success', that, 'form', true, 0);	             	            
+	            	responseActions('ajax-message', message, 'alert-success', that, 'form', true, 0);	
+	            	ga('send', 'event', 'Submit Button Nissan Website', 'Submission Successful', 'Forms - Nissan');              	            
 	            }
 	        });        
 		});
