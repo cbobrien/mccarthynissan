@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 	</head>
 	<body style="font-family:sans-serif;background:#fff">
-		<h2 style="color:#c71444;">Parts Enquiry from the McCarthy Nissan website</h2>
+		<h2 style="color:#c71444;">Test Drive Enquiry from the McCarthy Nissan website</h2>
 		<br>
 		<b>Dealership: </b>: {{ $dealership }}<br><br>
 		<div>

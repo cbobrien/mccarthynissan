@@ -15,13 +15,14 @@ class Helpers {
 	{
 		Mail::send('emails.' . $view, $data, function($message) use ($data)
 		{
+			dd('not actually sending');
 			$cc_array = explode(';',trim($data['admin_cc']));
 			array_push($cc_array, 'leads@cbrmarketing.co.za');
 			array_push($cc_array, 'connoro@cbrmarketing.co.za');
 
 			if(($key = array_search($data['admin_to'], $cc_array)) !== false) {
 			    unset($cc_array[$key]);
-			}			
+			}	
 
 		    $message->from($data['email'], $data['firstname'] . ' ' . $data['surname']);
 		    $message->subject($data['subject'] . ' from McCarthy Nissan website');

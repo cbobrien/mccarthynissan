@@ -7108,10 +7108,49 @@ h2.car-name {
 .navbar-nav .dropdown-menu {
   margin-left: -87px; }
 
+.promo-container {
+  padding: 2% 2% 0;
+  text-align: justify;
+  font-size: 0.1px;
+  -webkit-backface-visibility: hidden; }
+
+.promo-container:after {
+  content: '';
+  display: inline-block;
+  width: 100%; }
+
+.promo-container .mix, .promo-container .gap {
+  display: inline-block;
+  width: 98%;
+  margin: 1%; }
+
+.promo-container .mix {
+  text-align: left;
+  background: #03899c;
+  margin-bottom: 2%;
+  display: none; }
+  .promo-container .mix:hover {
+    opacity: 0.9; }
+
+.promotions-panel a {
+  display: block; }
+  .promotions-panel a.active {
+    color: #333; }
+  .promotions-panel a:hover {
+    text-decoration: none;
+    cursor: pointer; }
+
+.promo-links {
+  padding-left: 15px; }
+
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .promotions-panel a {
+    display: inline; }
+    .promotions-panel a:not(:first-of-type):before {
+      content: ' | '; }
   .search-page .description, .used-page .description {
     margin-left: -35px; }
   .more-links-dropdown {
@@ -7154,6 +7193,8 @@ h2.car-name {
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .promo-container .mix, .promo-container .gap {
+    width: 48%; }
   .mm-outer.dealerships span {
     display: table-cell; }
   .yamm .dropdown.yamm-fw .dropdown-menu.new-car-menu-container {

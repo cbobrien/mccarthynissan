@@ -16,7 +16,7 @@ class PromotionsController extends Controller {
 
 	public function index()
 	{
-		return view('admin.promotions.index')->with('title', 'Car colours');
+		return view('admin.promotions.index')->with('title', 'Promotions');
 	}
 
 	public function create()

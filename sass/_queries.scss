@@ -16,7 +16,16 @@
 /* Small devices (tablets, 768px and up) */
 @media (min-width: $screen-sm-min) {
 
-	
+	.promotions-panel {
+		a {
+			display: inline;
+
+			&:not(:first-of-type):before {
+				content: ' | ';
+			}
+		}
+	}
+
 
 	// .navbar-nav .dropdown-menu {
 	// 	margin-left: -87px;
@@ -152,6 +161,11 @@
 	// 	font-size: 100px;
 	// 	padding: 40px 0;
 	// }
+
+	.promo-container .mix,
+	.promo-container .gap{
+		width: 48%;
+	}
 
 	.mm-outer.dealerships {
 		span {

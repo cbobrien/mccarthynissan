@@ -175,7 +175,7 @@
 		    	position: myLatlng,
 		      	map: map,
 		      	title: '{{ trim($dealership->name) }}',
-		      	icon: '{{ Config::get('app.url') }}/images/marker.png'
+		      	icon: '/images/marker.png'
 		  	});
 		}
 

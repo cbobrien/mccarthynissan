@@ -2104,3 +2104,54 @@ h2.car-name {
 	// 	}
 	// }
 }
+.promo-container{
+  padding: 2% 2% 0;
+  text-align: justify;
+  font-size: 0.1px;
+  
+  -webkit-backface-visibility: hidden;
+}
+
+.promo-container:after{
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.promo-container .mix,
+.promo-container .gap{
+  display: inline-block;
+  width: 98%;
+  margin: 1%;
+}
+
+.promo-container .mix{
+  text-align: left;
+  background: #03899c;
+  margin-bottom: 2%;
+  display: none;
+
+  &:hover {
+  	opacity: 0.9;
+  }
+}
+
+
+.promotions-panel {
+	a {
+		display: block;
+
+		&.active {
+			color: #333;
+		}
+
+		&:hover {
+			text-decoration: none;
+			cursor: pointer;
+		}
+	}
+}
+
+.promo-links {
+	padding-left: 15px;
+}
