@@ -15,7 +15,7 @@
 
 						<div class="ajax-message"></div>
 
-						{!! Form::open(['route' => 'contact.send', 'class' => 'form-horizontal', 'id' => 'form']) !!}
+						{!! Form::open(['route' => 'contact.send', 'class' => '', 'id' => 'form']) !!}
 
 							<div class="form-group">
 								<label for="dealership_id" class="required-label">Dealership</label>
