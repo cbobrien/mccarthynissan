@@ -15,7 +15,7 @@ class Helpers {
 	{
 		Mail::send('emails.' . $view, $data, function($message) use ($data)
 		{
-			dd('not actually sending');
+			dd($data['admin_cc']);
 			$cc_array = explode(';',trim($data['admin_cc']));
 			array_push($cc_array, 'leads@cbrmarketing.co.za');
 			array_push($cc_array, 'connoro@cbrmarketing.co.za');

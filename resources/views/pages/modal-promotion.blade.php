@@ -16,6 +16,12 @@
 
 							<div class="ajax-message"></div>													
 
+							@if (isset($dealerships))
+								<div class="form-group">
+									<label for="dealership_id"  class="required-label">Dealership</label>
+									{!! Form::select('dealership_id', [null => 'Please select a dealership'] + $dealerships, null, ['class' => 'form-control', 'id' => 'dealership_id', 'required']) !!}
+								</div>
+							@endif
 							<div class="form-group">
 								<label for="firstname" class="required-label">First Name</label>								
 								{!! Form::text('firstname', null, ['class' => 'form-control', 'id' => 'firstname', '']) !!}

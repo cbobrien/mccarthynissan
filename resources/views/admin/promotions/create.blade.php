@@ -18,7 +18,7 @@
 						<div class="form-group">
 							<label for="dealership_id" class="col-md-4 control-label">Dealership</label>
 							<div class="col-md-6">
-								{!! Form::select('dealership_id', [null => 'Please Select'] + $dealerships, null, ['class' => 'form-control']) !!}
+								{!! Form::select('dealership_id', ['0' => 'Group'] + $dealerships, null, ['class' => 'form-control']) !!}
 							</div>
 						</div>
 

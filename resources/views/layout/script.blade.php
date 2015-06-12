@@ -119,6 +119,7 @@
             data: {
 	            _token: $('#promotionForm :input[name=_token]').val(),
 	            promotion_id: $('#promotionForm #promotionId').val(),
+	            dealership_id: $('#promotionForm #dealership_id').val(),
 	            firstname: $('#promotionForm #firstname').val(),	    
 	            surname:  $('#promotionForm #surname').val(),
 	            tel:  $('#promotionForm #tel').val(),

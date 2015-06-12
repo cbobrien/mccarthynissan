@@ -39,7 +39,10 @@
 		    oTable = $('#versions').DataTable({
 		        "processing": true,
 		        "serverSide": true,
-		        "ajax": "/admin/dealerships/all",
+		        "ajax": {
+		        		"url": "/admin/dealerships/all",
+		        		"type": "POST"
+		        },
 		        "columns": [			        	
 		            {data: 'name', name: 'name'},
 		           	{data: 'coynumber', name: 'coynumber'},

@@ -137,13 +137,18 @@ class PagesController extends Controller {
 	public function specials()
 	{		
 		$promotions = Promotion::currentPromotions();
+		$groupPromotions = Promotion::groupPromotions();
+		// dd($groupPromotions);
 		$specials = Special::currentSpecials();
+		$dealerships = Dealership::lists('name', 'id');
 
 		return view('pages.specials')->with(['menu' => $this->menu, 
 											  'path' => $this->path,
 											  'dealershipMenu' => $this->dealershipMenu,
+											  'groupPromotions' => $groupPromotions,
 											  'promotions' => $promotions,
 											  'specials' => $specials,
+											  'dealerships' => $dealerships,
 											  'title' => 'Nissan Specials from McCarthy Dealers South Africa',
 											  'description' => 'With a wide selection of cars to choose from, you are assured of a great deal. All McCarthy Nissan dealers participate and offers are subject to stock availability.',
 											  'keywords' => 'mccarthy nissan specials'

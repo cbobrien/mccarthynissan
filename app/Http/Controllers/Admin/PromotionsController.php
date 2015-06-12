@@ -57,11 +57,9 @@ class PromotionsController extends Controller {
 
 	public function all()
 	{
-		$colours = Promotion::join('nissan_dealerships', 'nissan_promotions.dealership_id', '=', 'nissan_dealerships.id')
-					->select(['nissan_promotions.id as id',  'nissan_promotions.image_path as image_path',
-							  'nissan_promotions.created_at as created_at',											  						
-							  'nissan_dealerships.name as dealership_name'])
-					->orderBy('order', 'asc');		
+		$colours = Promotion::select(['nissan_promotions.id as id', 'nissan_promotions.image_path as image_path',
+							  'nissan_promotions.created_at as created_at', 'nissan_promotions.name as name'])
+							->orderBy('order', 'asc');		
 
 	    return Datatables::of($colours)
 	        ->addColumn('edit', '<a href="/admin/promotions/{{$id}}/edit"><i class="fa fa-pencil-square-o"></i></a>')

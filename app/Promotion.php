@@ -26,6 +26,19 @@ class Promotion extends Model {
 							 	->get();
 	}
 
+	public static function groupPromotions()
+	{
+		return Promotion::where('nissan_promotions.published' , '=', 1)
+						  ->where('nissan_promotions.expiry_date', '>=', date('Y-m-d'))
+						  ->select(['nissan_promotions.id as id', 'nissan_promotions.name as name',
+										  'nissan_promotions.image_path as image_path', 'nissan_promotions.created_at as created_at',
+										  'nissan_promotions.published as published', 'nissan_promotions.order as order',
+										  'nissan_promotions.expiry_date as expiry_date'
+						  ])
+						  ->orderBy('expiry_date', 'asc')
+						  ->get();
+	}
+
 	public static function getNameById($id)
 	{
 		return Promotion::where('id', $id)->pluck('name');

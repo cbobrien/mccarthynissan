@@ -13,6 +13,7 @@ class PromotionEnquiryRequest extends Request {
 	{
 		return [
 			'promotion_id' => 'required',
+			'dealership_id' => 'required',
 			'firstname' => 'required',
 			'surname' => 'required',
 			'email' => 'required|email',

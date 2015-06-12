@@ -40,10 +40,8 @@
 		        "serverSide": true,
 		        "ajax": "/admin/promotions/all",
 		        "columns": [			        	
-		            {data: 'dealership_name', name: 'dealership_name'},
-		          
-		           	{data: 'image_path', name: 'image_path'},
-		           
+		            {data: 'name', name: 'name'},		          
+		           	{data: 'image_path', name: 'image_path'},		           
 		            {data: 'delete', name: 'delete', orderable: false, searchable: false, class: 'text-center'}       
 		        ]
 		    });

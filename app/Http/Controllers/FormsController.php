@@ -236,8 +236,10 @@ class FormsController extends Controller {
 	{	
 		PromotionEnquiry::create($request->all());
 
-		$dealership_id = Promotion::getDealerIdById($request->promotion_id);
-		$dealership = Dealership::getNameById($dealership_id);
+		// $dealership_id = Promotion::getDealerIdById($request->promotion_id);
+		
+		$dealership = Dealership::getNameById($request->dealership_id);
+		// dd($dealership);
 
 		$data = ['dealership' => $dealership,
 				 'promotion' => Promotion::getNameById($request->promotion_id),
@@ -247,8 +249,8 @@ class FormsController extends Controller {
 				 'tel' => trim($request->tel),				 
 				 'date' => date('d F Y'), 
 				 'time' => date('G:i'),				 
-				 'admin_to' => Dealership::getEmails($dealership_id, 'emails_dealer_principal'), 
-				 'admin_cc' => Dealership::getEmails($dealership_id, 'emails_promotions'), 
+				 'admin_to' => Dealership::getEmails($request->dealership_id, 'emails_dealer_principal'), 
+				 'admin_cc' => Dealership::getEmails($request->dealership_id, 'emails_promotions'), 
 				 'subject' => 'Promtion Enquiry'];
 
 		if (trim($data['admin_to']) == '')

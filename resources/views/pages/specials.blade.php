@@ -55,12 +55,42 @@
 					</div>
 					<div role="tabpanel" class="tab-pane promotions-panel" id="promotions">
 						<div class="row">
-											
+
+								<?php
+									
+									$filter = '';
+									$items = '';
+									$groupItems = '';
+									$groupFilter = '';
+								?>
+
+
+								@if (count($groupPromotions) > 0)
+									<?php
+										$groupFilter .= '<a class="filter" data-filter="all">Group</a>';
+										foreach ($groupPromotions as $groupPromotion)
+										{
+																						
+											$groupItems .= '<a href="#" 
+															data-toggle="modal"
+															data-target="#modalPromotion"									
+															data-promotion-id="'. $groupPromotion->id .'"
+															data-promotion-name="'. $groupPromotion->name .'">
+																<div class="mix" data-myorder="'. $groupPromotion->order .'">
+																	<img src="'. $groupPromotion->image_path . '" alt="'. $groupPromotion->title .'" class="img-responsive">
+																</div>
+															</a>';
+										}
+									?>
+								@endif
+
+								<?php //dd($groupFilter); ?>
+
 								@if (count($promotions) > 0)
 
 									<?php
-										$items = '';
-										$filter = '<a class="filter" data-filter="all">All</a>';
+										
+										$filter = ''; 
 
 										$filter_array = [];
 
@@ -88,24 +118,34 @@
 										// dd($filter_array);
 									?>						
 													
+									
+								@endif
+							
+								{{-- @if($filter != '') --}}
 									<div class="promo-links">
-										<a class="filter" data-filter="all">All</a>
+										@if($groupFilter != '')
+											<a class="filter" data-filter="all">Group</a>
+										@endif
+
+										@if(isset($filter_array))
 										<?php
+
 											asort($filter_array);
 											foreach ($filter_array as $key => $value)
 											{
 												echo '<a class="filter" data-filter=".'. $value . '">'. $key .'</a>';
 											}
 										?>
+										@endif
 									</div>
+								{{-- @endif --}}
 
+								{{-- @if($items != '') --}}
 									<div id="promoContainer" class="promo-container">
-										<?php echo $items; ?>
+										<?php echo $groupItems . $items; ?>
 									</div>
-								@else								
-									<p>There are no current promotions</p>								
-								@endif
-							
+								{{-- @endif --}}
+
 						</div>
 					</div>
 				</div>

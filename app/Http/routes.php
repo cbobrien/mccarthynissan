@@ -71,7 +71,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/admin/videos/all', 'Admin\VideosController@all');
 	Route::resource('/admin/videos', 'Admin\VideosController');
 	//dealerships
-	Route::get('/admin/dealerships/all', 'Admin\DealershipController@all');
+	Route::any('/admin/dealerships/all', 'Admin\DealershipController@all');
 	Route::resource('/admin/dealerships', 'Admin\DealershipController');
 	//general enquiries
 	Route::get('/admin/enquiries/all', 'Admin\GeneralEnquiriesController@all');
