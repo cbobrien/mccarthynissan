@@ -36,10 +36,13 @@
 		    oTable = $('#enquiries').DataTable({
 		        "processing": true,
 		        "serverSide": true,
-		        "ajax": "/admin/promotion-enquiries/all",
+		        "ajax": {
+		        	"url": "/admin/promotion-enquiries/all",
+		        	"type": "POST"
+		        },
 		        "columns": [
 		        	{data: 'created_at', name: 'created_at', searchable: false},
-		        	{data: 'name', name: 'name'},
+		        	{data: 'name', name: 'nissan_promotion_enquiries.surname'},
 		           	{data: 'dealership', name: 'dealership', searchable: false},
 		            {data: 'delete', name: 'delete', orderable: false, searchable: false, class: 'text-center'}       
 		        ]

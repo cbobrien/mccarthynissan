@@ -38,7 +38,10 @@
 		    oTable = $('#colours').DataTable({
 		        "processing": true,
 		        "serverSide": true,
-		        "ajax": "/admin/promotions/all",
+		        "ajax": {
+		        	"url":	"/admin/promotions/all",
+		        	"type": "POST"
+		        },
 		        "columns": [			        	
 		            {data: 'name', name: 'name'},		          
 		           	{data: 'image_path', name: 'image_path'},		           

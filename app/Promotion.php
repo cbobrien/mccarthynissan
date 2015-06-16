@@ -29,6 +29,7 @@ class Promotion extends Model {
 	public static function groupPromotions()
 	{
 		return Promotion::where('nissan_promotions.published' , '=', 1)
+						  ->where('nissan_promotions.dealership_id', '=', 0)
 						  ->where('nissan_promotions.expiry_date', '>=', date('Y-m-d'))
 						  ->select(['nissan_promotions.id as id', 'nissan_promotions.name as name',
 										  'nissan_promotions.image_path as image_path', 'nissan_promotions.created_at as created_at',

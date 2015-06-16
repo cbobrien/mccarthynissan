@@ -257,8 +257,10 @@ $(function() {
 	$('#modalPromotion').on('show.bs.modal', function(e) {
 	    var promotion_id = $(e.relatedTarget).data('promotion-id');
 	    var promotion_name = $(e.relatedTarget).data('promotion-name');
+	    var dealership_id = $(e.relatedTarget).data('dealership-id');
 	    $(e.currentTarget).find('input[name="promotionId"]').val(promotion_id);	  
 	    $(e.currentTarget).find('.promotion-name').text(promotion_name);
+	    $(e.currentTarget).find('#dealership_id').val(dealership_id);
 	});
 
 	$('#modalPromotion').on('hide.bs.modal', function(e) {	    

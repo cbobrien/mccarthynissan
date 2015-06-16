@@ -67,9 +67,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/admin/gallery-features/categories/{car_id}', 'Admin\GalleryFeaturesController@get_categories_by_car');
 	Route::get('/admin/gallery-features/all', 'Admin\GalleryFeaturesController@all');
 	Route::resource('/admin/gallery-features', 'Admin\GalleryFeaturesController');
-	//videos
-	Route::get('/admin/videos/all', 'Admin\VideosController@all');
-	Route::resource('/admin/videos', 'Admin\VideosController');
 	//dealerships
 	Route::any('/admin/dealerships/all', 'Admin\DealershipController@all');
 	Route::resource('/admin/dealerships', 'Admin\DealershipController');
@@ -83,22 +80,22 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('/admin/parts/all', 'Admin\PartsController@all');
 	Route::resource('/admin/parts', 'Admin\PartsController', ['except' => ['create', 'store', 'update', 'edit']]);
 	//parts
-	Route::get('/admin/services/all', 'Admin\ServicesController@all');
+	Route::any('/admin/services/all', 'Admin\ServicesController@all');
 	Route::resource('/admin/services', 'Admin\ServicesController', ['except' => ['create', 'store', 'update', 'edit']]);
 	//test drives
-	Route::get('/admin/test-drives/all', 'Admin\TestDrivesController@all');
+	Route::any('/admin/test-drives/all', 'Admin\TestDrivesController@all');
 	Route::resource('/admin/test-drives', 'Admin\TestDrivesController', ['except' => ['create', 'store', 'update', 'edit']]);
 	//promotions
-	Route::get('/admin/promotions/all', 'Admin\PromotionsController@all');
+	Route::any('/admin/promotions/all', 'Admin\PromotionsController@all');
 	Route::resource('/admin/promotions', 'Admin\PromotionsController');
 	//used car enquiries
 	Route::get('/admin/used-enquiries/all', 'Admin\UsedEnquiriesController@all');
 	Route::resource('/admin/used-enquiries', 'Admin\UsedEnquiriesController', ['except' => ['create', 'store', 'update', 'edit']]);
 	//special enquiries
-	Route::get('/admin/special-enquiries/all', 'Admin\SpecialEnquiriesController@all');
+	Route::any('/admin/special-enquiries/all', 'Admin\SpecialEnquiriesController@all');
 	Route::resource('/admin/special-enquiries', 'Admin\SpecialEnquiriesController', ['except' => ['create', 'store', 'update', 'edit']]);
 	//promotion enquiries
-	Route::get('/admin/promotion-enquiries/all', 'Admin\PromotionEnquiriesController@all');
+	Route::any('/admin/promotion-enquiries/all', 'Admin\PromotionEnquiriesController@all');
 	Route::resource('/admin/promotion-enquiries', 'Admin\PromotionEnquiriesController', ['except' => ['create', 'store', 'update', 'edit']]);
 
 });

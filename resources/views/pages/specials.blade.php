@@ -61,13 +61,16 @@
 									$filter = '';
 									$items = '';
 									$groupItems = '';
-									$groupFilter = '';
+									// $groupFilter = '';
+
+									// dd($groupPromotions);
 								?>
 
+			
 
 								@if (count($groupPromotions) > 0)
 									<?php
-										$groupFilter .= '<a class="filter" data-filter="all">Group</a>';
+										// $groupFilter .= '<a class="filter" data-filter=".Group">Group</a>';
 										foreach ($groupPromotions as $groupPromotion)
 										{
 																						
@@ -76,7 +79,7 @@
 															data-target="#modalPromotion"									
 															data-promotion-id="'. $groupPromotion->id .'"
 															data-promotion-name="'. $groupPromotion->name .'">
-																<div class="mix" data-myorder="'. $groupPromotion->order .'">
+																<div class="mix Group" data-myorder="'. $groupPromotion->order .'">
 																	<img src="'. $groupPromotion->image_path . '" alt="'. $groupPromotion->title .'" class="img-responsive">
 																</div>
 															</a>';
@@ -84,7 +87,7 @@
 									?>
 								@endif
 
-								<?php //dd($groupFilter); ?>
+						
 
 								@if (count($promotions) > 0)
 
@@ -107,15 +110,15 @@
 											$items .= '<a href="#" 
 															data-toggle="modal"
 															data-target="#modalPromotion"									
-															data-promotion-id="'. $promotion->id .'"
+															data-promotion-id="'. $promotion->id .'" 
+															data-dealership-id="'. $promotion->dealership_id .'"
 															data-promotion-name="'. $promotion->name .'">
 																<div class="mix '. $dealerClass  .'" data-myorder="'. $promotion->order .'">
 																	<img src="'. $promotion->image_path . '" alt="'. $promotion->title .'" class="img-responsive">
 																</div>
 															</a>';
 										}
-
-										// dd($filter_array);
+										
 									?>						
 													
 									
@@ -123,8 +126,8 @@
 							
 								{{-- @if($filter != '') --}}
 									<div class="promo-links">
-										@if($groupFilter != '')
-											<a class="filter" data-filter="all">Group</a>
+										@if($groupItems != '')
+											<a class="filter" data-filter=".Group">Group Promotions</a>
 										@endif
 
 										@if(isset($filter_array))
@@ -160,7 +163,11 @@
 	<script>
 		$(function() {
 			$("#promotionsTabButton").click(function() {
-				$('#promoContainer').mixItUp();
+				$('#promoContainer').mixItUp({
+					load: {
+						filter: '.Group'
+					}
+				});
 			});
 			
 		});
