@@ -48,7 +48,7 @@
 				<div class="modal-footer">
 					<div class="row">
 						<div class="col-xs-6 col-xs-offset-3">
-							<button type="button" class="btn btn-red btn-larger btn-block" id="enquireSend">Send</button>							
+							<button type="button" class="btn btn-s btn-larger btn-block" id="enquireSend">Send</button>							
 						</div>	
 					</div>
 				</div>

@@ -8,7 +8,9 @@
 			<div role="tabpanel">
 				<ul class="nav nav-tabs" role="tablist">
 					<li role="presentation" class="active"><a href="#specials-feed" aria-controls="passenger" role="tab" data-toggle="tab">Specials</a></li>
-					<li role="presentation"><a href="#promotions" aria-controls="electric" role="tab" data-toggle="tab" id="promotionsTabButton">Promotions</a></li>					
+					@if(count($groupPromotions) > 0 || count($promotions) > 0)
+						<li role="presentation"><a href="#promotions" aria-controls="electric" role="tab" data-toggle="tab" id="promotionsTabButton">Promotions</a></li>					
+					@endif
 				</ul>
 				<div class="tab-content specials">
 					<div role="tabpanel" class="tab-pane active" id="specials-feed">											
@@ -61,16 +63,13 @@
 									$filter = '';
 									$items = '';
 									$groupItems = '';
-									// $groupFilter = '';
+									$groupFilter = '';
 
-									// dd($promotions);
 								?>
-
-			
 
 								@if(count($groupPromotions) > 0)
 									<?php
-										// $groupFilter .= '<a class="filter" data-filter=".Group">Group</a>';
+										$groupFilter = '<a class="filter" data-filter="all">All</a>';
 										foreach ($groupPromotions as $groupPromotion)
 										{
 																						
@@ -87,33 +86,24 @@
 									?>
 								@endif
 
-						
 
 								@if(count($promotions) > 0)
 
 									<?php
 										
 										$filter = ''; 
-
 										$filter_array = [];
+										$groupFilter = '<a class="filter" data-filter="all">All</a>';
 
 										foreach ($promotions as $promotion)
-										{
-											
-
-
-
-
-
+										{											
 											$dealer = str_replace('McCarthy Nissan ', '', $promotion->dealership_name);
 											$dealerClass = str_replace(' ', '', $dealer);
 
 											if (!in_array($dealer, $filter_array)) {
-										       $filter_array[ $dealer] = $dealerClass;
+										       $filter_array[$dealer] = $dealerClass;
 										       $filter .= '<a class="filter" data-filter=".'. $dealerClass . '">'. $dealer .'</a>';
 										    }
-
-
 
 											$items .= '<a href="#" 
 															data-toggle="modal"
@@ -132,30 +122,28 @@
 									
 								@endif
 							
-								{{-- @if($filter != '') --}}
-									<div class="promo-links">
-										@if($groupItems != '')
-											<a class="filter" data-filter=".Group">Group Promotions</a>
-										@endif
 
-										@if(isset($filter_array))
+							
+								<div class="promo-links">
+									<?php echo $groupFilter; ?>
+									@if($groupItems != '')
+										<a class="filter" data-filter=".Group">Group Promotions</a>
+									@endif
+
+									@if(isset($filter_array))
 										<?php
-
 											asort($filter_array);
 											foreach ($filter_array as $key => $value)
 											{
 												echo '<a class="filter" data-filter=".'. $value . '">'. $key .'</a>';
 											}
 										?>
-										@endif
-									</div>
-								{{-- @endif --}}
-
-								{{-- @if($items != '') --}}
-									<div id="promoContainer" class="promo-container">
-										<?php echo $groupItems . $items; ?>
-									</div>
-								{{-- @endif --}}
+									@endif
+								</div>
+							
+								<div id="promoContainer" class="promo-container">													
+									{!! html_entity_decode($groupItems) !!}  {!! html_entity_decode($items) !!}
+								</div>							
 
 						</div>
 					</div>
@@ -172,9 +160,9 @@
 		$(function() {
 			$("#promotionsTabButton").click(function() {
 				$('#promoContainer').mixItUp({
-					load: {
-						filter: '.Group'
-					}
+					// load: {
+					// 	filter: '.Group'
+					// }
 				});
 			});
 			

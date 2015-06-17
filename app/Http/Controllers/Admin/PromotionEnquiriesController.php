@@ -19,8 +19,8 @@ class PromotionEnquiriesController extends Controller {
 
 	public function show(PromotionEnquiry $enquiry)
 	{
-		$dealership_id = Promotion::getDealerIdById($enquiry->promotion_id);
-		$dealership = Dealership::getNameById($dealership_id);
+		// $dealership_id = Promotion::getDealerIdById($enquiry->promotion_id);
+		$dealership = Dealership::getNameById($enquiry->dealership_id);
 		$promotion = Promotion::getNameById($enquiry->promotion_id);	
 		return view('admin.enquiries_promotions.view')->with(['enquiry' => $enquiry, 'dealership' => $dealership, 'promotion' => $promotion]);
 	}
@@ -33,7 +33,7 @@ class PromotionEnquiriesController extends Controller {
 
 	public function all() {
 		$enquiries = PromotionEnquiry::join('nissan_promotions', 'nissan_promotion_enquiries.promotion_id', '=', 'nissan_promotions.id')
-					->join('nissan_dealerships', 'nissan_promotion_enquiries.dealership_id', '=', 'nissan_dealerships.id')				
+					->leftJoin('nissan_dealerships', 'nissan_promotion_enquiries.dealership_id', '=', 'nissan_dealerships.id')				
 					->select(['nissan_promotion_enquiries.id as id', 
 							  DB::raw('CONCAT(nissan_promotion_enquiries.firstname, " ", nissan_promotion_enquiries.surname) AS name'),
 									  'nissan_promotion_enquiries.created_at as created_at', 'nissan_dealerships.name as dealership'])

@@ -137,8 +137,7 @@ class PagesController extends Controller {
 	public function specials()
 	{		
 		$promotions = Promotion::currentPromotions();
-		$groupPromotions = Promotion::groupPromotions();
-		// dd($groupPromotions);
+		$groupPromotions = Promotion::groupPromotions();		
 		$specials = Special::currentSpecials();
 		$dealerships = Dealership::lists('name', 'id');
 
@@ -198,7 +197,7 @@ class PagesController extends Controller {
 	{
 		$dealership = Dealership::where('id', $id)->with(['promotions'])->first();
 		$coynumber = Dealership::getCoyById($id);
-		$specials = Special::currentSpecials($coynumber, 2);
+		$specials = Special::currentSpecials($coynumber, 3);
 		
 		switch($dealership->name) {
 
