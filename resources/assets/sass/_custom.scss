@@ -1,5 +1,6 @@
 body {
 	padding-top: 70px;
+	position: relative;
 }
 
 .scrolled {
@@ -21,7 +22,7 @@ body {
 	// &.navbar-default .navbar-nav > li:first-of-type a {
 	// 	background-image: url(../images/divider-scroll.png), url(../images/divider-scroll.png);
 	// 	background-repeat: no-repeat;
-	// 	background-position: right center, left center;
+	// 	background-position: right center, left cnter;
 	// }
 
 	& .navbar-nav > .active:not(.open) > a {
@@ -33,6 +34,11 @@ body {
 .navbar-brand.active {
 	background-position: 0 -16px;
 	height: 70px;
+}
+
+.navbar-nav > li > a {
+
+  font-size: 15px;
 }
 
 .btn-larger {
@@ -73,6 +79,12 @@ body {
 	text-shadow: none;
 }
 
+.yamm .dropdown.yamm-fw .dropdown-menu.new-car-menu-container {
+	height: 405px;
+	overflow-y: scroll;	
+	width: 780px;
+	left: auto;
+}
 
 // .navbar-default .navbar-nav  > li:not(.active):before {
 // 	content: '';
@@ -110,18 +122,22 @@ body {
   	}
 
   	li {
-		padding-left: 40px;
+		padding-left: 35px;
 		background-image: url(../images/offcanvas-divider.png);
 		background-repeat: no-repeat;
 		background-position: right bottom;
 		transition: all .3s ease;
- 
+
   		&.active {			
 			background-color: $brand-primary;
 			box-shadow: inset 8px 0 15px -2px #830325;
 
-			a {
-				background: url(../images/mccarthy-logo-2.png) no-repeat left center;
+			& > a {
+				background: url(../images/mccarthy-logo-off-canvas.png) no-repeat left center;
+
+				&:focus {
+					text-decoration: none;
+				}
 			}
   		}
 
@@ -139,8 +155,31 @@ body {
   		font-variant: small-caps;
   		color: #ececec;
   		display: block;
-  		padding: 15px 0 15px 22px;
+  		padding: 15px 0 15px 32px;
   	}
+}
+
+.offcanvas .dropdown-menu > li {
+
+	width: 250px;
+	padding-left: 10px;
+
+	& > a {
+
+		color: #fff;
+		padding-left:55px;
+		background-image: none;
+
+		&:hover {
+			background: transparent;
+		}
+
+		&.active {
+
+		}
+	}
+
+	
 }
 
 //tabs
@@ -148,29 +187,43 @@ body {
 .page-tabs .nav-tabs > li:not(.active) {
 	background: #e8e7e7;
 	background-image: linear-gradient(#f6f5f5, #e1e0e0);
-	border-right: 1px #fff solid;
+	border-right: 1px #fff solid;	
+}
+
+.dropdown-menu .nav-tabs > li:first-of-type {
+	border-left: 1px #fff solid;
 }
 
 .dropdown-menu .tab-content .tab-pane,
 .page-tabs .tab-content .tab-pane {
 	background: #ffffff;
-	padding: 20px;
+	padding: 20px 20px 5px 20px;
 	border-radius: 0 0 8px 8px;
 }
 
 .car-menu-item {
+
+	padding:  10px;
+	background: #F8F8F8;
+	border-radius: 10px 10px 10px 30px;
+	text-align: center;
+	margin-bottom: 15px;
 
 	h5 {
 		font-variant: small-caps;
 		color: #252525;
 		font-size: 18px;
 		font-weight: bold;
+		text-align: left;
+		padding-left: 40px;
 	}
 
 	.price {
 		padding-bottom: 10px;
 		border-bottom: 1px solid #e9e9e9;
 		margin-bottom: 30px;
+		text-align: left;
+		padding-left: 40px;
 	}
 
 	img {
@@ -178,18 +231,18 @@ body {
 	}
 }
 
-
-
 .page-heading {
-	font-size: 50px;
+	font-size: 40px;
 	font-family: $font-family-nissan;
 	font-variant: small-caps;
+	letter-spacing: 0.02em;
 }
 
 .bottom-menu {
 	background: $gray-darker;
 	color: #fff;
 	padding: 40px 0;
+	border-top: 1px solid #eeeeee;
 
 	a {
 		color: $gray-light;
@@ -212,6 +265,8 @@ body {
 		padding-left:0;
 	}
 }
+
+
 
 .carousel {
 
@@ -238,6 +293,7 @@ body {
 .footer {
 	text-align: center;
 	padding: 30px 0;
+	border-top: 1px solid #999;
 
 	p {
 		color: #999999;
@@ -330,11 +386,11 @@ body {
 		font-variant: small-caps;
 		font-family: $font-family-nissan;
 		letter-spacing: 0.02em;
-		font-size: 22px;
+		font-size: 20px;
 		display: table-cell;
 		width: 100%;
 		border-radius: 0;
-		text-align: center;
+		// text-align: center;
 		border: 1px solid #fff;
 		transition: all .6s;
 		
@@ -355,10 +411,27 @@ body {
 	width: 100%;
 }
 
-
+.mccarthy-title {
+	background: #000;
+	border-radius: 10px 10px 0 0;
+}
 
 .c2a-icon.why-mccarthy {
 	border-right: 0;
+}
+
+.why-mccarthy-links {
+	padding: 0;
+}
+
+.why-mccarthy-links li:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+.why-mccarthy-links li {
+  background: url(../images/mccarthy-logo.png) no-repeat left center;
+  padding: 5px 0 5px 40px;
+  list-style: none;
 }
 
 .mccarthy-title .c2a-icon {
@@ -393,23 +466,23 @@ body {
 	background: $gray-darker;
 }
 
-.why-mccarthy {
-	background: #000000;
-}
+// .why-mccarthy {
+// 	background: #000000;
+// }
 
-.why-mccarthy-links {
-	list-style: none;
-	padding: 0;
+// .why-mccarthy-links {
+// 	list-style: none;
+// 	padding: 0;
 
-	li {
-		background: url(../images/mccarthy-logo.png) no-repeat left center;
-		padding: 5px 0 5px 40px;
+// 	li {
+// 		background: url(../images/mccarthy-logo.png) no-repeat left center;
+// 		padding: 5px 0 5px 40px;
 		
-		&:not(:last-child) {
-			margin-bottom: 3px;
-		}		
-	}
-}
+// 		&:not(:last-child) {
+// 			margin-bottom: 3px;
+// 		}		
+// 	}
+// }
 
 
 .page-title {
@@ -437,10 +510,6 @@ body {
 	&.active {
 		background-color: $brand-primary;
 		color: #ffffff;
-
-	// + div {
-	// 	display: block;
-	// }
 	}
 
 	&:hover:not(.active) {
@@ -463,18 +532,50 @@ body {
 	}
 }
 
-.copy-accordion div {
+.copy-accordion > div {
 	display: none;
 	padding: 30px 20px;
 	background: #ffffff;
 
 	&:first-of-type {
-		display: block;
+		// display: block;
 	}
 }
 
-.copy-accordion div.default {
+.copy-accordion > div.default {
  	display: block
+}
+
+.copy-accordion {
+
+	& .nav-tabs {
+		background: rgb(243, 243, 243);
+		border: 1px solid #ccc;
+		margin-top: 20px;
+		
+		li {
+
+			a {
+				border: none;
+				border-right: 1px solid #E0DADA;
+			}
+		}
+
+		
+	}
+
+	& .tab-pane {
+		padding: 20px;
+		border: 1px solid #E0DADA;
+		border-top: none;
+		border-radius: 0 0 10px 10px;
+	}
+
+	.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover {
+		border: none;
+		border-right: 1px solid #E0DADA;
+	}
+
 }
 
 
@@ -497,6 +598,10 @@ body {
 		border-radius: 0 0 10px 10px;
 	}
 
+	& .tab-pane img {
+		border-radius: 0 0 0 7px;
+	}
+
 }
 
 
@@ -507,6 +612,7 @@ body {
  .dealership-details {
 
 	text-align: right;
+	padding-top: 35px;
 
  	h6 {
  		color: $brand-primary;
@@ -534,6 +640,10 @@ body {
 
 .btn-min {
 	min-width: 200px;
+}
+
+.btn-min-2 {
+	min-width: 220px;
 }
 
 .normal-font .btn {
@@ -589,7 +699,7 @@ body {
 
  .btn-grey-modal {
  	@include btn-grey-modal;
-
+	
  	&:hover {
  		@include btn-black;
 
@@ -613,6 +723,7 @@ body {
 .small-button-left{
 	
 	padding: 5px 25px;
+	border-radius: 8px 10px 8px 28px;
 	//text-shadow: none;	
 
 	// &:hover {
@@ -625,6 +736,7 @@ body {
 .small-button-right{
 	//@include btn-curved-reverse;
 	padding: 5px 25px;
+	border-radius: 8px 28px 8px 10px;
 	//text-shadow: none;
 
 	// &:hover {
@@ -641,18 +753,53 @@ body {
  }
 
 .mm-outer {
-	background: rgba(235,235,235,0.8);
+	background: rgba(235,235,235, 1);
 	border-top-color: #ebebeb;
 	padding: 20px;
+
+	& .nav-tabs {
+		background: rgba(243, 243, 243, 1);
+	}
+}
+
+.navbar-collapse.in {
+    overflow-y: visible;
 }
 
 .mm-outer.dealerships {
 	margin-left: -100px;
+	span {
+		display: none;
+	}
+}
+
+.dealerships-menu-dropped {
+	display: block;
+	position: relative;
+	padding: 0;
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	margin-left: 200px;
+	width: 290px;
+
+	li {
+		
+		padding-left: 90px;
+
+		a {
+			&:first-of-type{
+				border-radius: 0;
+			}
+		}
+	}
 }
 
  .mm-inner-dealerships {
  	list-style: none;
 	padding: 0;
+
+
 
 	li {
 		background: #f6f5f5;
@@ -728,7 +875,7 @@ body {
  	background-repeat: no-repeat;
  	background-position: left top;
 	height: 100px; 
-	width: 80px; 
+	width: 90px; 
 	position: fixed; 
 	
 	z-index: 99999;
@@ -741,9 +888,7 @@ body {
 	left: 50%;
 	transform: rotate(-90deg);
 
-	transition: all .7s;
-	// top: 20%; 
-	// left: 0;
+	//transition: all .7s;
 
 	&:before {
 		content: '';
@@ -753,11 +898,24 @@ body {
 	 	background-repeat: no-repeat;
 	 	background-position: center center;
 	 	position: absolute;
-	 	left: 0;
+	 	left: 10px;
 	 	top: 0;
 	 	transition: opacity .2s;
 	 	opacity: 0.7;
 	 	transform: rotate(90deg);
+	}
+
+	&:after {
+		content: 'Search';
+		color: #fff;
+		font-variant: small-caps;
+		margin-top: 40px;
+		top: 0;
+		position: absolute;
+		left: -10px;
+		display: block;
+		text-shadow: 1px 1px 1px #000;
+		transform: rotate(90deg);
 	}
 
 	&:hover {
@@ -786,6 +944,7 @@ body {
 	border:2px solid white;
 	padding: 10px;
   	font-size: 18px;
+	transition: all .4s;
 
   	&:focus {
   		@include btn-red;
@@ -823,6 +982,7 @@ body {
 	border: 1px #ffffff solid;
 	padding: 10px;
 	color: #ffffff;
+	font-variant: small-caps;
 
 	&:hover {
 		background: #8c8b8b;
@@ -874,9 +1034,10 @@ body {
 
 .form-container {
 	padding: 30px;
-	background: rgba(180, 180, 180, 0.2);
+	background: #EAEAEA;
 	border-radius: 0 50px 0 50px;
 	border: 1px solid #fff;
+	position: relative;
 }
 
 textarea {
@@ -921,13 +1082,12 @@ legend {
 
 	h2 {
 		color: #fff;
-		background: $brand-primary;
+		background: #000;
 		font-family: $font-family-nissan;
 		margin-top: 0;
 		padding: 10px;
-		letter-spacing: 0.03em;
+		letter-spacing: 0.05em;
 		margin-bottom: 6px;
-		//border-radius: 0 10px 0 0;
 	}
 }
 
@@ -960,10 +1120,15 @@ legend {
 		//@include gradient-radial(#525252, $gray-darker);
 		transition: all .3s;
 
+
 		// &:hover {
 		// 	//@include gradient-radial(#ebebeb, #999);
 		// 	border-color: #393939;
 		// }
+		p {
+			font-size: 12px;
+			margin-top: 10px;
+		}
 	}
 
 	margin-bottom: 20px;
@@ -971,43 +1136,55 @@ legend {
 
 .specials-container {
 	
-	.nav-tabs {
-		border-top: none;
-		border-right: none;
-		border-bottom: 1px solid #ddd;
+	// .nav-tabs {
+	// 	border-top: none;
+	// 	border-right: none;
+	// 	// border-bottom: 1px solid #ddd;
 
-		> li {
+	// 	& .nav-tabs > li > a {
+	// 		border: none;
+	// 	}
 
-			 border-color: #ddd;
-			 border: none;
+	// 	> li {
 
-			&.active a {
-				color: #000;
-			}
+	// 		 border-color: #ddd;
+	// 		 border: none;
+	// 		 background: #222;
 
-			> a {
-				color: #fff;
-				padding: 10px 50px;
-				font-size: 22px;
-				border: none;
+	// 		&.active a {
+	// 			color: #000;
+	// 			background: #D4D4D4;
+	// 			border: none;
+	// 		}
 
-				&.active,
-				&:hover {
-					color: #000;
-				}
-			}
-		}
+	// 		> a {
+	// 			color: #fff;
+	// 			padding: 10px 50px;
+	// 			font-size: 22px;
+	// 			// border: none;
+	// 			transition: all .1s;
 
-	}
 
-	.nav-tabs > li:first-of-type,
-	.nav-tabs > li:first-of-type a {
-	  border-radius: 0;
-	}
+	// 			border-top: none;
 
-	li {
-		background: $brand-primary;
-	}
+	// 			&.active,
+	// 			&:hover {
+	// 				color: #000;
+
+	// 			}
+	// 		}
+	// 	}
+
+	// }
+
+	// .nav-tabs > li:first-of-type,
+	// .nav-tabs > li:first-of-type a {
+	//   border-radius: 0;
+	// }
+
+	// li {
+	// 	background: $brand-primary;
+	// }
 
 	& .tab-content {
 		padding: 30px 20px;
@@ -1024,30 +1201,64 @@ legend {
 .car-row {
 	
 	overflow: hidden;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
+	background: white;
+	margin-left: 15px;
+	margin-right: 15px;
+
+	img {
+		margin-left:-15px;
+	}
+
+	h2 {
+		font-weight: bold;
+		font-size: 22px;
+	}
 
 	h3 {
-		font-weight: bold;
+		font-size: 18px;
+		margin: 10px 0 5px;
 	}
 
 	.description {
-		// background: #fff;
-		// height: 100%;
 		background: #fefefe;
-		//margin-left: -15px;
 		border-top: 2px solid white;
 		border-bottom: 2px solid white;
-		margin-left: -30px;
-		padding-left: 30px;
+		margin-left: -15px;
 	}	
 
 	.price {
-		font-size: 22px;
+		font-size: 20px;
+		font-weight: bold;
+		color: $brand-primary;
 	}
+
+	&.stock {
+		// border-bottom: 1px #ccc solid;
+		// padding-bottom: 20px;
+
+
+		  background: #F5F5F5;
+		  padding: 20px;
+		  border-radius: 8px;
+		  border: 1px solid #DCDCDC ;
+
+		  .description {
+		  	padding: 10px;
+		  	border-radius: 5px;
+		  	border: 1px solid #DCDCDC;
+		  }
+
+		  img {
+		  	margin-bottom: 15px;
+		  }
+	}
+
 }
 
 .car-detail-top {
-	@include gradient-radial(#ffffff, #dfdbdb);
+	//@include gradient-radial(#ffffff, #dfdbdb);
+	background: #fff;
 	padding: 20px 0;
 
 	& .btn:first-of-type {
@@ -1068,54 +1279,50 @@ legend {
 
 		a {
 			display: block;
-			width: 48px;
-			height: 48px;
+			width: 42px;
+			height: 42px;
 			border-radius: 100%;
-			border: 2px solid transparent;
+			border: 2px solid #ebebeb;
 			padding: 3px;
+			margin-right: 9px;
 			
 			&:after {
 				content: '';
-				width: 40px;
-				height: 40px;
+				width: 42px;
+				height: 42px;
 				display: block;
 				border-radius: 100%;
-				margin-top: -1px;
-				margin-left: -1px;
+				margin-top: -3px;
+				margin-left: -5px;
 				box-shadow: inset 0 10px 9px -7px rgba(0,0,0,0.6);
+				//box-shadow: 1px 1px 1px rgba(0,0,0,0.8);
 				transition: all .3s;
 			}
 
 			&.active,
 			&:hover {
-				border-color: #afaaaa;
-				box-shadow: none;
+				border-color: #444;
 			}
 		}
 	}
+
+	.price {
+		font-family: $font-family-nissan;
+		color: $brand-primary;
+		font-size: 34px;
+		//font-weight: bold;		
+	}
+
+	.kms {
+		font-size: 22px;
+	}
 }
 
-.colour-2e303b:after {
-	background: #2e303b;
-}
-
-.colour-8f0d03:after {
-	background: #8f0d03;
-}
-
-.colour-5c5554:after {
-	background: #5c5554;
-}
-
-.colour-bb3025:after {
-	background: #bb3025;
-}
 
 .car-name {
 	color: #d0d0d0;
 	font-family: $font-family-nissan;
 	font-size: 24px;
-	padding-top: 19px;
 	padding-right: 21px;
 	display: none;
 	font-variant: small-caps;
@@ -1176,9 +1383,20 @@ h2.car-name {
 	z-index: 1000;
 }
 
+.exterior-download-links {
+	text-align: left;
+	margin-bottom: 15px;
+}
+
+.interior-download-links {
+	text-align: left;
+	margin-bottom: 15px;
+}
+
 .car-links {
 
-	text-align: right;
+	text-align: left;
+	padding-left: 0;
 
 	li {
 		list-style: none;
@@ -1208,11 +1426,26 @@ h2.car-name {
 }
 
 .banner-heading {
-	font-size: 100px;
+	font-size: 60px;
 	font-family: $font-family-nissan;
 	color: #fff;
 	text-shadow: 2px 2px 2px #000;
 	font-variant: small-caps;
+	font-style: italic;
+	letter-spacing: 0.07em;
+
+	&.smaller ,
+	.smaller {
+		font-size: 30px;
+		font-style: none;
+		letter-spacing: 0.01em;
+		font-family: $font-family-sans-serif;
+		font-weight: bold;
+		font-variant: small-caps;
+		letter-spacing: 0.02em;
+	}
+
+	// .smaller
 }
 
 .show {
@@ -1299,6 +1532,11 @@ h2.car-name {
 	border-radius: 15px;
 	border: 1px solid #fff;
 	padding: 20px;
+	margin-bottom: 20px;
+
+	// &:last-of-type {
+	// 	margin-bottom: 0;
+	// }
 
 	h4 {
 		font-family: $font-family-nissan;
@@ -1324,6 +1562,10 @@ h2.car-name {
 .car-details-menu {	
 	li {
 		background: url(../images/car-divider.png) no-repeat right top;
+
+		a {
+			padding: 15px 12px;
+		}
 	}
 }
 
@@ -1411,4 +1653,506 @@ h2.car-name {
 
 .no-border {
 	border: none;
+}
+
+.used-car-image-container {
+	display: block;
+	overflow: hidden;
+
+	img {
+		transition: all .4s;
+		border: 5px solid #fff;
+	}
+
+	&:hover {
+		
+		img {
+		   // transform: rotate(-15deg) scale(1.5,1.5);
+		}
+	}
+
+
+}
+
+.pagination {
+	
+	margin-top: 0;
+
+	li {
+
+		a {
+			padding: 9px 13px;
+			transition: all .3s;
+		}
+
+		&.break {			
+			padding: 9px 13px;
+			float: left;
+			background: rgba(255, 255, 255, 0.8);
+			border-top: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+		}
+
+		&.next a {
+			text-indent: -99999em;
+			position: relative;
+
+			&:after {
+				content: '>';
+				position: absolute;
+				top: 10px;
+				left: 7px;
+				text-indent: 0;
+			}
+		}
+
+		&.previous a {
+			text-indent: -99999em;
+			position: relative;
+
+			&:after {
+				content: '<';
+				position: absolute;
+				top: 10px;
+				left: 7px;
+				text-indent: 0;
+			}
+		}
+	}
+
+	&.previous,
+	&.pages,
+	&.next {
+		float: left;
+	}	
+
+	&.pages {
+		margin: 0;
+
+		li:first-child a,
+		li:last-child a {
+			border-radius: 0;
+		}
+	}
+}
+
+.example-enter {
+  opacity: 0.01;
+  transition: all .5s ease-in;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+}
+
+.example-leave {
+  opacity: 1;
+  transition: all .5s ease-in;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+}
+
+.view-used-car {
+
+	.price {
+		
+	}
+}
+
+.gallery-container {
+	border: 3px solid #fff;
+}
+
+.specials-gallery-container {
+
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	margin-bottom: 20px;
+
+	// img {
+	// 	width: 100%;
+	// 	height: 100%;
+	// }
+}
+
+.picker-pics {
+	position: relative;
+	min-height: 380px;
+}
+
+.picker-pic-item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+
+	&.active {
+		display: block;
+	}
+	
+	.pic-item-container {
+		position: relative;
+		// padding-bottom: 15px;
+
+		.picker-pic-caption {
+			position:absolute;
+			bottom:20px;
+			right:2px;
+			font-size: 14px;
+			background: rgba(255, 255, 255, 0.8);
+			padding: 5px;
+		}
+	}
+}
+
+.picker-pic-caption {
+	text-align: right;
+}
+
+.required-label:before {
+	content: '* ';
+	color: $brand-primary;
+	position: relative;
+	top: 3px;
+}
+
+.spinner {
+	position: absolute;
+	top: 30%;
+	left: 40%;
+	display: none;
+}
+
+
+.radius-tr {
+	border-radius: 0 20px 0 0;
+}	
+
+
+
+.special-caption {
+	color: #fff;
+	background: #222;
+	font-size: 12px;
+	padding: 10px;
+	
+	p {
+		// margin-bottom: 10px;
+	}
+}
+
+
+.promotion-container {
+	margin-bottom: 30px;
+
+	img {
+
+		transition: all .5s;
+
+		&:hover {
+			opacity: 0.9;
+		}
+	}
+}
+
+.special-container {
+	margin-bottom: 30px;
+
+	img {
+
+		transition: all .5s;
+
+		&:hover {
+			opacity: 0.9;
+		}
+	}
+}
+
+.new-cars {
+	.car-menu-item h5 {
+		padding-left: 0;
+	}
+
+	.car-menu-item .price {
+		padding-left: 0;
+	}
+}
+
+.promotion-caption {
+
+	transition: all .2s;
+	color: #fff;
+	background: #222;
+	padding: 5px 10px 10px;
+
+	a {
+		color: #fff;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+}
+
+.why-mccarthy {
+
+	.intro {
+		border-bottom: 1px #ccc solid;
+		padding-bottom: 10px;
+		cursor: pointer;
+	}
+
+	.content {
+		display: none;
+		border-bottom: 1px #ccc solid;
+		padding-bottom: 10px;
+	}
+
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.used-buttons {
+	padding-right: 10px;
+}
+
+.border-grey {
+	// border-color: #999;
+}
+
+.stock-tabs {
+
+	& .tab-pane {
+		padding-top: 20px;
+		background: #fff;
+	}
+
+	h2 {
+		color: #000;
+		background: none;
+		padding: 0;
+		font-family: $font-family-sans-serif;
+		font-size: 17px;
+	}
+}
+
+// #searchRegionRow,
+// #searchSeriesRow,
+// #searchPriceButtonRow {
+// 	display: none;
+// }
+// #searchSeriesRow {
+// 	display: none;
+// }
+
+#searchRegionRow,
+#searchSeriesRow,
+#searchPriceButtonRow {
+	display: none;
+}
+
+// #searchPriceButtonRow {
+// 	display: none;
+// }
+
+.search-page,
+.used-page {
+
+	& .pagination {
+		margin: 12px 0 8px;
+
+		span {
+			padding: 9px 13px;
+		}
+	}
+
+	.special-thumb {
+		margin-bottom: 15px;
+		transition: all 1.5s;
+
+		&:hover {
+			opacity: 0.9;
+		}		
+	}
+
+	.specials {
+		margin-top: 80px;
+
+		img {
+			transition: all 1.5s;
+
+			&:hover {
+				opacity: 0.9;
+			}			
+		}
+	}
+
+	.used-car-image-container {
+
+		img {
+			border: 10px solid #fff;
+		}
+	}
+
+	.description {
+		background: #F5F5F5;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-left: 0;
+		padding: 10px;
+		border-radius: 8px;
+		border: 1px solid #DCDCDC;
+
+		h2 {
+			margin-top: 10px;
+		}
+	}
+
+
+
+
+}
+
+.special-thumb:hover {
+
+}
+
+.search-meta {
+	padding: 10px;
+	
+	// border-top: 1px solid #fff;
+	// border-bottom: 1px solid #fff;
+}
+
+.search-results {
+	padding: 20px 20px 0 20px;
+	background: #fff;
+	border-radius: 10px;
+	border: 1px solid #ddd;
+
+	h2 {
+		margin-top: 0;
+	}
+}
+
+
+.modal-select {
+	background-color: #333;
+	color: #fff;
+	margin: 3px 0;
+
+	&[disabled] {
+		background: #fff;
+		color: #999;
+	}
+}
+
+.flexslider {
+	margin-bottom: 15px;
+}
+
+.flex-control-thumbs li {
+	// max-height: 100px;
+	max-width: 105px;
+	overflow: hidden;
+	margin-right: 4px;
+
+	img {
+		border: 2px solid #fff;
+	}
+}
+
+.flex-control-thumbs .flex-active {
+
+	border: 2px solid #000;
+}
+
+.navbar-nav .dropdown-menu {
+	margin-left: -87px;
+
+	// &.dealerships {
+	// 	// display: block;
+	// 	position: relative;
+	// 	width: 200px;
+	// 	left: 90px;
+	// 	background: none;
+	// 	border: none;
+	// 	box-shadow: none;
+	// 	// border-radius: 0;
+	// 	// margin-left: 100px;
+
+	// 	.mm-inner-dealerships {
+	// 		// width: 200px;
+	// 		background: none;
+	// 		width: 180px;
+
+	// 		li:first-of-type a,
+	// 		li:last-of-type a {
+	// 			border-radius: 0;
+	// 		}
+			
+			
+	// 	}
+
+	// 	span {
+	// 		display: none;
+	// 	}
+	// }
+}
+.promo-container{
+  padding: 2% 2% 0;
+  text-align: justify;
+  font-size: 0.1px;
+  
+  -webkit-backface-visibility: hidden;
+}
+
+.promo-container:after{
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.promo-container .mix,
+.promo-container .gap{
+  display: inline-block;
+  width: 98%;
+  margin: 1%;
+}
+
+.promo-container .mix{
+  text-align: left;
+  background: #03899c;
+  margin-bottom: 2%;
+  display: none;
+
+  &:hover {
+  	opacity: 0.9;
+  }
+}
+
+
+.promotions-panel {
+	a {
+		display: block;
+
+		&.active {
+			color: #333;
+		}
+
+		&:hover {
+			text-decoration: none;
+			cursor: pointer;
+		}
+	}
+}
+
+.promo-links {
+	padding-left: 15px;
 }

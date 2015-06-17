@@ -1,10 +1,81 @@
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
+// @media (max-width: $screen-sm-min) {
 
+// 	.new-cars {
+// 		h5 {
+// 			padding-left: 0;
+// 		}
 
+// 		.price {
+// 			padding-left: 0;
+// 		}
+// 	}
+// }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: $screen-sm-min) {
+
+	.promotions-panel {
+		a {
+			display: inline;
+
+			&:not(:first-of-type):before {
+				content: ' | ';
+			}
+		}
+	}
+
+
+	// .navbar-nav .dropdown-menu {
+	// 	margin-left: -87px;
+
+	// 	&.dealerships {
+	// 		// display: block;
+	// 		position: relative;
+	// 		width: 200px;
+	// 		left: 90px;
+	// 		background: none;
+	// 		border: none;
+	// 		box-shadow: none;
+	// 		// border-radius: 0;
+	// 		// margin-left: 100px;
+
+	// 		.mm-inner-dealerships {
+	// 			// width: 200px;
+	// 			background: none;
+	// 			width: 180px;
+
+	// 			li:first-of-type a,
+	// 			li:last-of-type a {
+	// 				border-radius: 0;
+	// 			}
+				
+				
+	// 		}
+
+	// 		span {
+	// 			display: block;
+	// 		}
+	// 	}
+	// }
+
+	.search-page,
+	.used-page {
+
+		.description {
+			margin-left: -35px;
+		}
+
+	}
+
+	.more-links-dropdown {
+		left:-150px;
+	}
+
+	#more-links {
+		position: relative;
+	}
 
 	.navbar {	
   		background-color: $gray-darker;
@@ -26,7 +97,47 @@
 
 	.page-heading {
 		font-size: 50px;
+
+		&.used-cars {
+			font-size: 30px;
+		}
 		//text-align: right;
+	}
+
+	.pagination li {
+
+		a {
+			padding: 15px 18px;
+			transition: all .3s;
+		}
+
+		&.break {
+			padding: 15px 20px;
+		}
+
+		&.next a,
+		&.previous a {
+			text-indent: 0;
+
+			&:after {
+				content: '';
+			}
+		}
+	}
+
+	.version-container {
+		// margin-bottom: 0;
+	}
+
+	.search-page,
+	.used-page {
+
+		& .pagination {
+
+			span {
+				padding: 15px 18px;
+			}
+		}
 	}
 }
 
@@ -37,14 +148,55 @@
 		padding-bottom: 30px;
 		min-height: 100px;
 	}	
+
+	.copy-accordion .nav-tabs li a {
+		padding: 10px 5px;
+	}
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: $screen-md-min) {
 
+	// .banner-heading {
+	// 	font-size: 100px;
+	// 	padding: 40px 0;
+	// }
+
+	.promo-container .mix,
+	.promo-container .gap{
+		width: 48%;
+	}
+
+	.mm-outer.dealerships {
+		span {
+			display: table-cell;
+		}
+	}
+
+	.car-menu-item {
+		h5,
+		.price {
+			// text-align: left;
+			// padding-left: 10px;
+		}
+	}
+
+
+	.yamm .dropdown.yamm-fw .dropdown-menu.new-car-menu-container {
+		height: 430px;
+		width: 900px;
+		left: 0;
+		margin: 0 auto;
+	}
+
 	.page-heading {
 		font-size: 70px;
 		line-height: 65px;
+
+		&.used-cars {
+			font-size: 50px;
+			line-height: 50px;
+		}
 	}
 
 	.price-range-container {
@@ -66,6 +218,7 @@
 	
 			&.mccarthy-block {
 				border-radius: 0 0 10px 10px;
+				min-height: 168px;
 			}
 
 			img {
@@ -101,15 +254,76 @@
 	.search-button {
 		top: 20%; 
 		left: 0;
+		width: 80px; 
 		bottom: auto;
 		transform: none;
+		
+		&:before {
+		 	top: -10px;
+		 	left: 0;
+		}
 
+		&:after {
+			top: 32px;
+			left: 10px;
+			transform: none;
+		}
 	}
+
+	.car-links {
+		text-align: right;
+	}
+
+	.exterior-download-links {
+		text-align: right;
+		margin-bottom: 0;
+	}
+
+	.interior-download-links {
+		text-align: right;
+		margin-bottom: 0;
+	}
+
+	.car-details-menu {	
+		li {			
+			a {
+				padding: 20px 30px;
+			}
+		}
+	}
+
+	.search-page,
+	.used-page {
+
+		& .pagination {
+
+			span {
+				padding: 15px 18px;
+			}
+		}
+	}
+
+	.car-row {
+		&.stock {
+			img {
+				margin-bottom: 0;
+			}
+		}
+	}
+
 	
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: $screen-lg-min) {
+
+	.yamm .dropdown.yamm-fw .dropdown-menu.new-car-menu-container {
+	
+		width: auto;
+		overflow-y: scroll;
+		// overflow: hidden;
+		margin: inherit;
+	}
 
 	.small-button-left {
 		@include btn-curved;
@@ -117,6 +331,18 @@
 
 	.small-button-right{
 		@include btn-curved-reverse;
+	}
+
+}
+
+@media (min-width: 993px) and (max-width: 1400px) {
+
+	.search-button {
+		top: 60%; 
+		left: 0;
+		width: 80px; 
+		bottom: auto;
+		transform: none;
 	}
 
 }

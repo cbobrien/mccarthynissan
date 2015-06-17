@@ -8,17 +8,11 @@
 	<title>{{ $title or '' }}</title>
 	<meta name="description" content="{{ $description or '' }}">
 	<meta name="keywords" content="{{ $keywords or '' }}">
-	{{-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> --}}
-	<link rel="stylesheet" href="/css/jquery-ui.min.css">
-	<link rel="stylesheet" href="/css/yamm.css">
-	<link rel="stylesheet" href="/css/bootstrap-select.min.css">
-	<link rel="stylesheet" href="/css/extralayers.css">
 	<link rel="stylesheet" href="/rs-plugin/css/settings.css">
-	<link rel="stylesheet" href="/css/flexslider.css">
-	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/everything.css">
 
 </head>
-<body style="position:relative">
+<body>
 	<div class="navmenu navmenu-default navmenu-fixed-right offcanvas">
 		<ul>
 			<li class="{{ ($path == '') ? 'active' : '' }}"><a href="/">Home</a></li>
