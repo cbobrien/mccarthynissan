@@ -1,3 +1,7 @@
+<?php
+	$path = str_replace('/admin/', '', $_SERVER['REQUEST_URI']);
+	// dd($path);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,7 +46,16 @@
 
 		<aside class="main-sidebar">
 			<section class="sidebar">				
-				<ul class="sidebar-menu">					
+				<ul class="sidebar-menu">
+					<li class="treeview">
+						<a href="#">
+							<i class="fa fa-dashboard"></i> <span>Promotions</span> <i class="fa fa-angle-left pull-right"></i>
+						</a>
+						<ul class="treeview-menu" <?php if(stristr($path, 'promotions')) echo 'style="display:block;"'; ?>>							
+		                	<li <?php if($path == 'promotions') echo 'class="active"'; ?>><a href="{{ URL::route('admin.promotions.index') }}"><i class="fa fa-circle-o"></i> List Promotions</a></li>
+		                	<li <?php if($path == 'promotions/create') echo 'class="active"'; ?>><a href="{{ URL::route('admin.promotions.create') }}"><i class="fa fa-circle-o"></i> Add Promotion</a></li>		                	
+		              	</ul>		              											
+					</li>					
 					<li class="treeview">
 						<a href="#">
 							<i class="fa fa-dashboard"></i> <span>New Cars</span> <i class="fa fa-angle-left pull-right"></i>
@@ -52,7 +65,7 @@
 		                	<li><a href="{{ URL::route('admin.categories.index') }}"><i class="fa fa-circle-o"></i> List Categories</a></li>
 		                	<li><a href="{{ URL::route('admin.categories.create') }}"><i class="fa fa-circle-o"></i> Add Category</a></li>
 		                	<li class="header">New Cars</li>
-		                	<li class="<?php if (Request::is('admin/cars')) echo 'active';?>"><a href="{{ URL::route('admin.cars.index') }}"><i class="fa fa-circle-o"></i> List New Cars</a></li>
+		                	<li class="<?php if (Request::is('admin/cars/*')) echo 'style="display:block;"';?>"><a href="{{ URL::route('admin.cars.index') }}"><i class="fa fa-circle-o"></i> List New Cars</a></li>
 		                	<li><a href="{{ URL::route('admin.cars.create') }}"><i class="fa fa-circle-o"></i> Add New Car</a></li>		                	
 		                	<li class="header">Versions</li>
 		                	<li><a href="{{ URL::route('admin.versions.index') }}"><i class="fa fa-circle-o"></i> List Versions</a></li>
@@ -69,13 +82,11 @@
 		                	<li class="header">Gallery Features</li>
 		                	<li><a href="{{ URL::route('admin.gallery-features.index') }}"><i class="fa fa-circle-o"></i> List Gallery Features</a></li>
 		                	<li><a href="{{ URL::route('admin.gallery-features.create') }}"><i class="fa fa-circle-o"></i> Add Gallery Feature</a></li>
-		                	{{-- <li class="header">Videos</li>
-		                	<li><a href="{{ URL::route('admin.videos.index') }}"><i class="fa fa-circle-o"></i> List Videos</a></li>
-		                	<li><a href="{{ URL::route('admin.videos.create') }}"><i class="fa fa-circle-o"></i> Add Videos</a></li> --}}
-		              	</ul>
-		              											
-					</li>					
-					<li><a href="{{ URL::route('admin.dealerships.index') }}"><i class="fa fa-circle-o"></i>Dealerships</a></li>
+		              	</ul>		              										
+					</li>
+					<li class="treeview">
+						<a href="{{ URL::route('admin.special-enquiries.index') }}"><i class="fa fa-circle-o"></i>Special Enquiries</a>
+					</li>										
 					<li class="treeview">
 						<a href="{{ URL::route('admin.enquiries.index') }}"><i class="fa fa-circle-o"></i>General Enquiries</a>
 					</li>
@@ -93,22 +104,12 @@
 					</li>
 					<li class="treeview">
 						<a href="{{ URL::route('admin.used-enquiries.index') }}"><i class="fa fa-circle-o"></i>Used Car Enquiries</a>
-					</li>
-					<li class="treeview">
-						<a href="{{ URL::route('admin.special-enquiries.index') }}"><i class="fa fa-circle-o"></i>Special Enquiries</a>
-					</li>
+					</li>					
 					<li class="treeview">
 						<a href="{{ URL::route('admin.promotion-enquiries.index') }}"><i class="fa fa-circle-o"></i>Promotion Enquiries</a>
-					</li>		
-					<li class="treeview">
-						<a href="#">
-							<i class="fa fa-dashboard"></i> <span>Promotions</span> <i class="fa fa-angle-left pull-right"></i>
-						</a>
-						<ul class="treeview-menu">							
-		                	<li><a href="{{ URL::route('admin.promotions.index') }}"><i class="fa fa-circle-o"></i> List Promotions</a></li>
-		                	<li><a href="{{ URL::route('admin.promotions.create') }}"><i class="fa fa-circle-o"></i> Add Promotion</a></li>		                	
-		              	</ul>		              											
-					</li>																			
+					</li>
+					<li><a href="{{ URL::route('admin.dealerships.index') }}"><i class="fa fa-circle-o"></i>Dealerships</a></li>		
+																								
 				</ul>
 			</section>
 		</aside>

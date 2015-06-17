@@ -63,12 +63,12 @@
 									$groupItems = '';
 									// $groupFilter = '';
 
-									// dd($groupPromotions);
+									// dd($promotions);
 								?>
 
 			
 
-								@if (count($groupPromotions) > 0)
+								@if(count($groupPromotions) > 0)
 									<?php
 										// $groupFilter .= '<a class="filter" data-filter=".Group">Group</a>';
 										foreach ($groupPromotions as $groupPromotion)
@@ -89,7 +89,7 @@
 
 						
 
-								@if (count($promotions) > 0)
+								@if(count($promotions) > 0)
 
 									<?php
 										
@@ -99,6 +99,12 @@
 
 										foreach ($promotions as $promotion)
 										{
+											
+
+
+
+
+
 											$dealer = str_replace('McCarthy Nissan ', '', $promotion->dealership_name);
 											$dealerClass = str_replace(' ', '', $dealer);
 
@@ -106,6 +112,8 @@
 										       $filter_array[ $dealer] = $dealerClass;
 										       $filter .= '<a class="filter" data-filter=".'. $dealerClass . '">'. $dealer .'</a>';
 										    }
+
+
 
 											$items .= '<a href="#" 
 															data-toggle="modal"
