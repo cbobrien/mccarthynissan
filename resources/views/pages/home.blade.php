@@ -7,7 +7,7 @@
 		<div class="banner">
 			<ul>
 				<li data-transition="incube-horizontal" data-slotamount="7">
-					{{-- <img src="/images/slides/one.jpg"> --}}
+				
 					<img src="/images/slides/dummy.jpg" data-lazyload="images/slides/one.jpg"  alt="McCarthy Nissan"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
 					<div class="tp-caption banner-heading smaller skewfromrightshort tp-resizeme rs-parallaxlevel-0"
 						data-x="left"
@@ -150,20 +150,6 @@
 		</div>
 	</div>		
 
-
-	<!--<div class="copy-container-dark">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<h2 class="page-heading">Our Mission</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero fugit magni non quae reiciendis. Sapiente enim ullam odit blanditiis natus tempora doloribus porro maxime autem tenetur, architecto quaerat amet laboriosam.
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis hic enim rerum et quod alias. Explicabo eveniet blanditiis voluptas, vel architecto sed, quia, nostrum commodi odio, praesentium mollitia nihil quibusdam!
-					<p>				
-				</div>
-			</div>
-		</div>		
-	</div>-->
 
 	<div class="calls-to-action" style="padding:60px 0">
 		<div class="container">

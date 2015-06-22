@@ -63,13 +63,13 @@
 									$filter = '';
 									$items = '';
 									$groupItems = '';
-									$groupFilter = '';
+									//$groupFilter = '';
 
 								?>
 
 								@if(count($groupPromotions) > 0)
 									<?php
-										$groupFilter = '<a class="filter" data-filter="all">All</a>';
+										// $groupFilter = '<a class="filter" data-filter="all">All</a>';
 										foreach ($groupPromotions as $groupPromotion)
 										{
 																						
@@ -93,7 +93,7 @@
 										
 										$filter = ''; 
 										$filter_array = [];
-										$groupFilter = '<a class="filter" data-filter="all">All</a>';
+									//	$groupFilter = '<a class="filter" data-filter="all">All</a>';
 
 										foreach ($promotions as $promotion)
 										{											
@@ -117,15 +117,13 @@
 															</a>';
 										}
 										
-									?>						
-													
+									?>																			
 									
 								@endif
 							
-
 							
 								<div class="promo-links">
-									<?php echo $groupFilter; ?>
+									<?php //echo $groupFilter; ?>
 									@if($groupItems != '')
 										<a class="filter" data-filter=".Group">Group Promotions</a>
 									@endif
@@ -160,9 +158,9 @@
 		$(function() {
 			$("#promotionsTabButton").click(function() {
 				$('#promoContainer').mixItUp({
-					// load: {
-					// 	filter: '.Group'
-					// }
+					load: {
+						filter: '.Group'
+					}
 				});
 			});
 			
